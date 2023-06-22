@@ -39,7 +39,7 @@ body {
     align-items: center;
     width:100%;
     padding: 1% 3%;
-    background-color:beige;
+    background-color:azure;
     margin-top:75px;
     height:20%;
     color: black;
@@ -75,7 +75,7 @@ body {
     padding-left:5%;
     padding-bottom:2%;
     overflow:scroll;
-    background-color:antiquewhite;
+    background-color:beige;
     
 }
 .diagnosis_block {
