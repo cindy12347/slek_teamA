@@ -43,6 +43,7 @@ body {
     margin-top:75px;
     height:20%;
     color: black;
+    height: 130px;
 }
 .question_block a {
     color: white;
@@ -218,6 +219,7 @@ body {
     justify-content: space-around;
     align-items: center;
     gap: 60px;
+    height: 130px;
 }
 .navbar_menu li{
     list-style:none;
@@ -253,6 +255,10 @@ body {
 .diagnosis_button_block button:hover {
     background-color: azure;
     cursor: pointer;
+}
+
+.fa-book {
+    color:#223D6D;
 }
 
 @media(max-width: 4000px) {
