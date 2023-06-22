@@ -14,10 +14,10 @@
             <nav class="navbar">
                 <h1 class="navbar_heading">{% block title %}{% endblock %}</h1>
                 
-                <div class="navbar_menu">
-                    <li class="navbar_item"><a href="#" class="navbar_link">1</a></li>
-                    <li class="navbar_item"><a href="#" class="navbar_link">2</a></li>
-                    <li class="navbar_item"><a href="#" class="navbar_link">3</a></li>
+                <ol class="navbar_menu">
+                    <li class="navbar_item"><a href="{{ url_for('pages', page='question1') }}" class="navbar_link">1</a></li>
+                    <li class="navbar_item"><a href="{{ url_for('pages', page='question2') }}" class="navbar_link">2</a></li>
+                    <li class="navbar_item"><a href="{{ url_for('pages', page='question3') }}" class="navbar_link">3</a></li>
                     <li class="navbar_item"><a href="#" class="navbar_link">4</a></li>
                     <li class="navbar_item"><a href="#" class="navbar_link">5</a></li>
                     <li class="navbar_item"><a href="#" class="navbar_link">6</a></li>
@@ -34,7 +34,7 @@
                     <li class="navbar_item"><a href="#" class="navbar_link">16</a></li>
                     <li class="navbar_item"><a href="#" class="navbar_link">17</a></li>
                     <li class="navbar_item"><a href="#" class="navbar_link"></a></li>
-                </div>
+                </ol>
                 
                 <div class="navbar_hamburger">
                     <span class="bar"></span>
@@ -51,15 +51,15 @@
                     <table class="data_table">
                         <tr>
                           <td class="data_table_left">PaO2</td>
-                          <td class="data_table_right">{% block PaO2 %}{% endblock %}</th>
+                          <td class="data_table_right">{% block PaO2 %}{% endblock %}mmHg</th>
                         </tr>
                         <tr>
                           <td class="data_table_left">PaCO2</td>
-                          <td class="data_table_right">{% block PaCO2 %}{% endblock %}</td>
+                          <td class="data_table_right">{% block PaCO2 %}{% endblock %}mmHg</td>
                         </tr>
                         <tr>
                           <td class="data_table_left">HCO3-</td>
-                          <td class="data_table_right">{% block HCO3 %}{% endblock %}</td>
+                          <td class="data_table_right">{% block HCO3 %}{% endblock %}mEq/L</td>
                         </tr>
                         <tr>
                           <td class="data_table_left">pH</td>
@@ -67,19 +67,19 @@
                         </tr>
                         <tr>
                           <td class="data_table_left">Na+</td>
-                          <td class="data_table_right">{% block Na %}{% endblock %}</td>
+                          <td class="data_table_right">{% block Na %}{% endblock %}mEq/L</td>
                         </tr>
                         <tr>
                           <td class="data_table_left">Cl-</td>
-                          <td class="data_table_right">{% block Cl %}{% endblock %}</td>
+                          <td class="data_table_right">{% block Cl %}{% endblock %}mEq/L</td>
                         </tr>
                         <tr>
                           <td class="data_table_left">Hb</td>
-                          <td class="data_table_right">{% block Hb %}{% endblock %}</td>
+                          <td class="data_table_right">{% block Hb %}{% endblock %}g/dL</td>
                         </tr>
                         <tr>
                           <td class="data_table_left">Albumin</td>
-                          <td class="data_table_right">{% block Albumin %}{% endblock %}</td>
+                          <td class="data_table_right">{% block Albumin %}{% endblock %}g/L</td>
                         </tr>
                     </table>
                 </div>
