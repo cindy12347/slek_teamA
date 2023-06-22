@@ -197,7 +197,9 @@ body {
     width: 100%;
     padding:1%;
 }
-.diagnosis_button_block button{
+
+
+.answer{
     width:20%;
     padding:1.5%;
     margin-left:.5%;
@@ -206,6 +208,18 @@ body {
     color:#223D6D;
     border-radius: 12px;;
     border: 2px solid #223D6D;
+    cursor: pointer;
+}
+
+.answer:hover{
+    background-color:azure;
+}
+
+.wrong.active{
+    background-color: red;
+}
+.right.active{
+    background-color: aquamarine;
 }
 
 .navbar_heading {
@@ -247,14 +261,6 @@ body {
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     background-color: white;
-}
-
-.diagnosis_button_block button {
-    cursor: pointer;
-}
-.diagnosis_button_block button:hover {
-    background-color: azure;
-    cursor: pointer;
 }
 
 .fa-book {
