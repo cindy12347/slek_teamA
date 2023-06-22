@@ -28,5 +28,8 @@ function book_click(){
 answer.forEach(n => n.addEventListener("click", ()=> {
     right.classList.toggle("active");
     wrong.forEach(n => n.classList.toggle("active"));
+    right.disabled = true;
+    wrong.forEach(n => n.disabled = true);
+
     
 }));

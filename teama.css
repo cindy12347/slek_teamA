@@ -217,6 +217,7 @@ body {
 
 .wrong.active{
     background-color: red;
+    color: white;
 }
 .right.active{
     background-color: aquamarine;
@@ -265,6 +266,7 @@ body {
 
 .fa-book {
     color:#223D6D;
+    cursor: pointer;
 }
 
 @media(max-width: 4000px) {
