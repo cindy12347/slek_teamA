@@ -55,8 +55,11 @@ body {
     width:100%;
     padding-left:3%;
     padding-right:3%;
+    padding-top: 2%;
+    padding-bottom: 0%;
     height:80vh;
 }
+
 .data_block {
     display:flex;
     flex-direction:row;
@@ -64,13 +67,13 @@ body {
     align-items: center;
     width: 30%;
     padding-right:0%;
-    padding-top: 2%;
-    padding-bottom: 2%;
+    padding-bottom:2%;
     
 }
 .ref_block {
     
     width: 70%;
+    height:100%;
     padding-top:2%;
     padding-left:5%;
     padding-bottom:2%;
@@ -146,9 +149,26 @@ body {
 	border: 2px solid #dddfe1;
     text-align:left;
 }
-.ref_list {
+.ref_click {
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.ref_click.active {
+    display: none;
     
 }
+.ref_list {
+    display:none;
+    
+}
+.ref_list.active {
+    display: block;
+    
+}
+
 .ref_list li{
     padding-bottom:1%;
 }
