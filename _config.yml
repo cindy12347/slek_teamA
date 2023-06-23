@@ -1,5 +1,7 @@
 image: python:3.6
 
+theme: minima
+
 pages:
   stage: build
   script:
