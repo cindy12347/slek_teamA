@@ -12,6 +12,7 @@ app = Flask(__name__, template_folder=template_folder)
 app.config['FREEZER_DESTINATION'] = 'public'
 app.config['FREEZER_RELATIVE_URLS'] = True
 app.config['FREEZER_IGNORE_MIMETYPE_WARNINGS'] = True
+
 freezer = Freezer(app)
 
 @app.cli.command()
@@ -31,8 +32,6 @@ def index():
 def pages(page):
     return render_template(page.lower() + '.html')
 
-
-
 # Main Function, Runs at http://0.0.0.0:8080
 if __name__ == "__main__":
-    app.run(port=9090)
+    app.run(port=9090, debug=True)
