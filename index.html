@@ -4,9 +4,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="keywords" content="SLEK self-learning enjoy knowledge">
         <meta name="description" content="這是SLEK發行的互動式教具呦！">
-        <link rel="stylesheet" href="../../static/all.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'all.css') }}">
         <link rel="shortcut icon" href="https://github.com/cindy12347/SLEK_teamB/blob/main/src/slek.png?raw=true"/>
-        <link href="../../static/teama.css" rel="stylesheet">
+        <link href="{{ url_for('static', filename = 'teama.css') }}" rel="stylesheet">
     </head>
     <body>
         <div class="main">
@@ -164,7 +164,7 @@
 
         
         
-        <script src="../../static/teama_block.js"></script>
+        <script src="{{ url_for('static', filename = 'teama_block.js') }}"></script>
     
     </body>
 </html>
