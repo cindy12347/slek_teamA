@@ -5,7 +5,7 @@ from flask import Flask, render_template, request
 from flask_frozen import Freezer
 
 
-template_folder = path.abspath('./wiki')
+template_folder = path.abspath('./templates')
 
 app = Flask(__name__, template_folder=template_folder)
 #app.config['FREEZER_BASE_URL'] = environ.get('CI_PAGES_URL')
@@ -24,17 +24,17 @@ def serve():
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('templates/index.html')
 
 @app.route('/question1')
 def index():
-    return render_template('question1.html')
+    return render_template('templates/index.html')
 
 
 
 @app.route('/<page>')
 def pages(page):
-    return render_template(str(Path('pages')) + '/' + page.lower() + '.html')
+    return render_template(str(Path('templates')) + '/' + page.lower() + '.html')
 
 
 
