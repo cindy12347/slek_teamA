@@ -26,6 +26,12 @@ def serve():
 def index():
     return render_template('index.html')
 
+@app.route('/question1')
+def index():
+    return render_template('question1.html')
+
+
+
 @app.route('/<page>')
 def pages(page):
     return render_template(str(Path('pages')) + '/' + page.lower() + '.html')
