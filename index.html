@@ -1,0 +1,171 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="SLEK self-learning enjoy knowledge">
+        <meta name="description" content="這是SLEK發行的互動式教具呦！">
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'all.css') }}">
+        <link rel="shortcut icon" href="https://github.com/cindy12347/SLEK_teamB/blob/main/src/slek.png?raw=true"/>
+        <link href="{{ url_for('static', filename = 'teama.css') }}" rel="stylesheet">
+    </head>
+    <body>
+        <div class="main">
+            <nav class="navbar">
+                <h1 class="navbar_heading">Tutorial正常</h1>
+                
+                <ol class="navbar_menu">
+                    <li class="navbar_item"><a href="{{ url_for('pages', page='question1') }}" class="navbar_link">1</a></li>
+                    <li class="navbar_item"><a href="{{ url_for('pages', page='question2') }}" class="navbar_link">2</a></li>
+                    <li class="navbar_item"><a href="{{ url_for('pages', page='question3') }}" class="navbar_link">3</a></li>
+                    <li class="navbar_item"><a href="#" class="navbar_link">4</a></li>
+                    <li class="navbar_item"><a href="#" class="navbar_link">5</a></li>
+                    <li class="navbar_item"><a href="#" class="navbar_link">6</a></li>
+                    <li class="navbar_item"><a href="#" class="navbar_link">7</a></li>
+                    <li class="navbar_item"><a href="#" class="navbar_link">8</a></li>
+                    <li class="navbar_item"><a href="#" class="navbar_link">9</a></li>
+                    <div style="width:100%"></div>
+                    <li class="navbar_item"><a href="#" class="navbar_link">10</a></li>
+                    <li class="navbar_item"><a href="#" class="navbar_link">11</a></li>
+                    <li class="navbar_item"><a href="#" class="navbar_link">12</a></li>
+                    <li class="navbar_item"><a href="#" class="navbar_link">13</a></li>
+                    <li class="navbar_item"><a href="#" class="navbar_link">14</a></li>
+                    <li class="navbar_item"><a href="#" class="navbar_link">15</a></li>
+                    <li class="navbar_item"><a href="#" class="navbar_link">16</a></li>
+                    <li class="navbar_item"><a href="#" class="navbar_link">17</a></li>
+                    <li class="navbar_item"><a href="#" class="navbar_link"></a></li>
+                </ol>
+                
+                <div class="navbar_hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+            <div class="question_block">
+                <p>有一40歲女性病人被家人送到急診，已嚴重腹瀉多日，病人體溫39度，心跳63次/分，呼吸速率30次/分，血壓115/85。你為他做一班抽血檢查與動脈氣體分析，也另外做了一些檢驗，重要數據如下：
+                </p>
+            </div>
+            <div class="data_ref_block">
+                <div class="data_block">
+                    <table class="data_table">
+                        <tr>
+                          <td class="data_table_left">PaO2</td>
+                          <td class="data_table_right">95 mmHg</th>
+                        </tr>
+                        <tr>
+                          <td class="data_table_left">PaCO2</td>
+                          <td class="data_table_right">33 mmHg</td>
+                        </tr>
+                        <tr>
+                          <td class="data_table_left">HCO3-</td>
+                          <td class="data_table_right">18 mEq/L</td>
+                        </tr>
+                        <tr>
+                          <td class="data_table_left">pH</td>
+                          <td class="data_table_right">7.33</td>
+                        </tr>
+                        <tr>
+                          <td class="data_table_left">Na+</td>
+                          <td class="data_table_right">125 mEq/L</td>
+                        </tr>
+                        <tr>
+                          <td class="data_table_left">Cl-</td>
+                          <td class="data_table_right">99 mEq/L</td>
+                        </tr>
+                        <tr>
+                          <td class="data_table_left">Hb</td>
+                          <td class="data_table_right">12.2 g/dL</td>
+                        </tr>
+                        <tr>
+                          <td class="data_table_left">Albumin</td>
+                          <td class="data_table_right">40 g/L</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="ref_block">
+                    <div class="ref_click">
+                        <a onclick="book_click()" ><i class="fa-solid fa-book fa-8x" style="margin-bottom:10%;"></i></a>
+                        <p>點我看分析！</p>
+                    </div>
+                    <ol class="ref_list">
+                        <li>判斷數值：<br>pH值較正常低，可知為「酸中毒」，由於PaCO2與HCO3-皆低於正常值，表示體內HCO3-低與排出CO2低，因此為代謝酸中毒。
+                            <table class="ref_table_num">
+                                <thead>
+                                    <tr>
+                                        <td></td>
+                                        <td>pH</td>
+                                        <td>PaCO2</td>
+                                    </tr>
+                                </thead>
+                                <tbody>                                      
+                                    <tr>
+                                        <td>正常值</td>
+                                        <td>7.35-7.45</td>
+                                        <td>35-45 mmHg</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Case</td>
+                                        <td>7.33</td>
+                                        <td>33</td>
+                                    </tr>
+                                    <tr>
+                                        <td>判斷</td>
+                                        <td>過低</td>
+                                        <td>過低</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+                        <li>判斷有無代償：<br>代謝性酸中毒依據為判斷呼吸排出的PaCO2是否可以代償過少排出的HCO3-
+                        </li>
+                        <li>Anion Gap:<br>AG落於正常範圍（4-12），表示為NAGMA非陰離子間隙代謝性酸中毒<br>
+                            <table class="ref_table_eq">
+                                <thead>
+                                    <tr>
+                                        <td>expected AG</td>
+                                        <td>AG</td>
+                                    </tr>
+                                </thead>
+                                <tbody>                                      
+                                    <tr>
+                                        <td>= 2.5 * albumin<br>= 2.5 * 4(g/dL)<br>= 10</td>
+                                        <td>= Na - (Cl + HCO3-)<br>= 125 - (99 + 18)<br>= 8</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+                        <li>結論：NAGMA非陰離子<br>間隙代謝性酸中毒
+                        </li>
+                    </ol>
+                </div>
+
+            </div>
+            <div class="diagnosis_block">
+                <div class="diagnosis_button_block">
+                    <button class="wrong answer " onclick="show_answer()">NAGMA非陰離子<br>間隙代謝性酸中毒</button>
+                    <button class="wrong answer" onclick="show_answer()">NAGMA非陰離子<br>間隙代謝性酸中毒</button>
+                    <button class="wrong answer" onclick="show_answer()">NAGMA非陰離子<br>間隙代謝性酸中毒</button>
+                    <button class="wrong answer" onclick="show_answer()">NAGMA非陰離子<br>間隙代謝性酸中毒</button>
+                    <button class="wrong answer" onclick="show_answer()">NAGMA非陰離子<br>間隙代謝性酸中毒</button>
+                </div>
+                <div class="diagnosis_button_block">
+                    <button class="wrong answer" onclick="show_answer()">NAGMA非陰離子<br>間隙代謝性酸中毒</button>
+                    <button class="wrong answer" onclick="show_answer()">NAGMA非陰離子<br>間隙代謝性酸中毒</button>
+                    <button class="right answer" onclick="show_answer()">NAGMA非陰離子<br>間隙代謝性酸中毒</button>
+                    <button class="wrong answer" onclick="show_answer()">NAGMA非陰離子<br>間隙代謝性酸中毒</button>
+                    <button class="wrong answer" onclick="show_answer()">NAGMA非陰離子<br>間隙代謝性酸中毒</button>
+                </div>
+            </div>
+            <div class="additional_block">
+
+            </div>
+            
+        </div>
+
+        
+        
+        <script src="{{ url_for('static', filename = 'teama_block.js') }}"></script>
+    
+    </body>
+</html>
+    
