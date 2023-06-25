@@ -4,16 +4,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="keywords" content="SLEK self-learning enjoy knowledge">
         <meta name="description" content="這是SLEK發行的互動式教具呦！">
-        <link rel="stylesheet" href="{{ url_for('static', filename = 'all.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'css/all.css') }}">
         <link rel="shortcut icon" href="https://github.com/cindy12347/SLEK_teamB/blob/main/src/slek.png?raw=true"/>
-        <link href="{{ url_for('static', filename = 'teama.css') }}" rel="stylesheet">
+        <link href="{{ url_for('static', filename = 'css/teamaaa.css') }}" rel="stylesheet">
     </head>
     <body>
         <div class="main">
-            
-            <div class="welcome_block">
-                <img style="width:30%; margin:3%;"src="https://github.com/cindy12347/SLEK_teamB/blob/main/src/slek.svg?raw=true">
-                <p href="{{ url_for('pages', page='tutorial_normal') }}">Welcome!</p>
+            <div class="welcome_block_block" >
+                <div class="welcome_block">
+                    <img src="https://github.com/cindy12347/SLEK_teamB/blob/main/src/slek.svg?raw=true">
+                    <a href="{{ url_for('pages', page='tutorial_normal') }}">Welcome!</a>
+                </div>
             </div>
         </div>
 
