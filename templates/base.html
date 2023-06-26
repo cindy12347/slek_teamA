@@ -50,15 +50,15 @@
                 <div class="data_block">
                     <table class="data_table">
                         <tr>
-                          <td class="data_table_left">PaO2</td>
+                          <td class="data_table_left">PaO<sub>2</sub></td>
                           <td class="data_table_right">{% block PaO2 %}{% endblock %}mmHg</th>
                         </tr>
                         <tr>
-                          <td class="data_table_left">PaCO2</td>
+                          <td class="data_table_left">PaCO<sub>2</sub></td>
                           <td class="data_table_right">{% block PaCO2 %}{% endblock %}mmHg</td>
                         </tr>
                         <tr>
-                          <td class="data_table_left">HCO3-</td>
+                          <td class="data_table_left">HCO3<sup>-</sup></td>
                           <td class="data_table_right">{% block HCO3 %}{% endblock %}mEq/L</td>
                         </tr>
                         <tr>
@@ -66,11 +66,11 @@
                           <td class="data_table_right">{% block pH %}{% endblock %}</td>
                         </tr>
                         <tr>
-                          <td class="data_table_left">Na+</td>
+                          <td class="data_table_left">Na<sup>+</sup></td>
                           <td class="data_table_right">{% block Na %}{% endblock %}mEq/L</td>
                         </tr>
                         <tr>
-                          <td class="data_table_left">Cl-</td>
+                          <td class="data_table_left">Cl<sup>-</sup></td>
                           <td class="data_table_right">{% block Cl %}{% endblock %}mEq/L</td>
                         </tr>
                         <tr>
@@ -95,7 +95,8 @@
             <div class="diagnosis_block">
                 {% block answer_button %}{% endblock %}
             </div>
-            <div class="additional_block">
+            <div class="additional_block" id="additional">
+                {% block additional %}{% endblock %}
 
             </div>
             
@@ -104,6 +105,7 @@
         
         
         <script src="{{ url_for('static', filename = 'teama_block.js') }}"></script>
+        <script src="{{ url_for('static', filename = 'jquery.js') }}"></script>
     
     </body>
 </html>
