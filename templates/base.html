@@ -35,11 +35,15 @@
                     <li class="navbar_item"><a href="#" class="navbar_link">17</a></li>
                     <li class="navbar_item"><a href="#" class="navbar_link"></a></li>
                 </ol>
-                
-                <div class="navbar_hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
+                <div class="navbar_arrow_ham">
+                  {% block arrow %}
+                  {% endblock %}
+                  
+                  <div class="navbar_hamburger">
+                      <span class="bar"></span>
+                      <span class="bar"></span>
+                      <span class="bar"></span>
+                  </div>
                 </div>
             </nav>
             <div class="question_block">
