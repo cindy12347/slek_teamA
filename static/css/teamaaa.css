@@ -583,7 +583,7 @@ body {
 
 @media(max-width: 768px) {
     .footer_icon {
-        width:100%;
+        min-width:180px;
     }
     .question_block {
         height:50%;
@@ -616,12 +616,21 @@ body {
 
 .footer_block {
     width:100%;
-    min-height: 75px;
+    min-height:100px;
     background-color:#223D6D;
     display:flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
+    color:white;
+}
+.footer_block p{
+    color:white;
+    font-size: 14px;
+}
+.footer_block a{
+    color:white;
+    font-size: 12px;
 }
 
 .footer_icon {
