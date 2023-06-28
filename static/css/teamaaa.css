@@ -187,7 +187,7 @@ body {
 }
 
 .welcome_block img{
-    width:80%;
+    width:60%;
 }
 
 
@@ -489,6 +489,10 @@ body {
 }
 .navbar_link:hover {
     color:bisque;
+}
+.navbar_link:visited {
+    color:#223D6D;
+
 }
 .navbar_reload {
     cursor: pointer;

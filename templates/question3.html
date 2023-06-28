@@ -2,12 +2,16 @@
 {% block title %}教案三{% endblock %}
 {% block arrow %}
 <div class="navbar_arrow">
-<a href="{{ url_for('pages', page='tutorial_normal') }}"><span class="arrow arrow1"></span></a>
-<a href="{{ url_for('pages', page='tutorial_normal') }}"><span class="arrow arrow2"></span></a>
-<a href="{{ url_for('pages', page='tutorial_normal') }}"><span class="arrow arrow3"></span></a>
+<a href="{{ url_for('pages', page='question4') }}"><span class="arrow arrow1"></span></a>
+<a href="{{ url_for('pages', page='question4') }}"><span class="arrow arrow2"></span></a>
+<a href="{{ url_for('pages', page='question4') }}"><span class="arrow arrow3"></span></a>
 </div>
 {% endblock %}
-{% block question %}1{% endblock %}
+{% block question %}
+有一40歲女性病人被家人送到急診，已嚴重腹瀉多日。病人體溫39度，
+心跳63次/分，呼吸速率30次/分，血壓115/85。你為他做一般抽血檢查與動脈氣體分析，
+也另外做了一些檢驗，重要數據如下：
+{% endblock %}
 {% block PaO2 %}1{% endblock %}
 {% block PaCO2 %}1{% endblock %}
 {% block HCO3 %}1{% endblock %}
@@ -16,18 +20,105 @@
 {% block Cl %}1{% endblock %}
 {% block Hb %}1{% endblock %}
 {% block Albumin %}1{% endblock %}
-{% block ref_list %}1{% endblock %}
+{% block ref_list %}
+<ol class="ref_list">
+    <li><b>判斷數值：</b><br>→pH較正常低，可知為「酸中毒」，由於PaCO2與[HCO3-]-皆低於正常值，表示為體內[HCO3-]低與排出CO2低，因此為代謝酸中毒
+        <table class="ref_table_num">
+            <thead>
+                <tr>
+                    <td></td>
+                    <td>pH</td>
+                    <td>PaCO<sub>2</sub></td>
+                    <td>HCO3<sup>-</sup></td>
+                    <td>PaO<sub>2</sub></td>
+                </tr>
+            </thead>
+            <tbody>                                      
+                <tr>
+                    <td>正常值</td>
+                    <td>7.35-7.45</td>
+                    <td>35-45 mmHg</td>
+                    <td>22-26 mEq/L</td>
+                    <td>80-100 mmHg</td>
+                </tr>
+                <tr>
+                    <td>Case</td>
+                    <td>7.33</td>
+                    <td>33</td>
+                    <td>18</td>
+                    <td>95</td>
+                </tr>
+                <tr>
+                    <td>判斷</td>
+                    <td>過低</td>
+                    <td>過低</td>
+                    <td>過低</td>
+                    <td>正常</td>
+                </tr>
+            </tbody>
+        </table>
+    </li>
+    <li><b>判斷急性或慢性：</b><br>代謝性酸中毒難以從數據判斷急性或慢性，在此忽略不討論。
+    </li>
+    <li><b>Anion gap：</b><br>結果：AG實際值< AG預估值，屬於非陰離子間隙代謝性酸中毒(NAGMA)
+        <table class="ref_table_eq">
+            <thead>
+                <tr>
+                    <td>AG預估值</td>
+                    <td>AG實際值</td>
+                    <td>ΔHCO3<sup>-</sup></td>
+                    <td>Δ/Δ</td>
+                </tr>
+            </thead>
+            <tbody>                                      
+                <tr>
+                    <td>= 2.5 * albumin<br>
+                        = 2.5 * 4(g/dL)<br>
+                        = 10
+                    </td>
+                    <td>= Na<sup>+</sup> - (Cl<sup>-</sup> + HCO3<sup>-</sup>)<br>
+                        = 125 - (99 + 18)<br>
+                        = 8
+                    </td>
+                    <td>= 24 - HCO3<sup>-</sup><br>
+                        = 24 - 16<br>
+                        = 8
+                    </td>
+                    <td>= ΔAG / ΔHCO3<sup>-</sup><br>
+                        = (27 - 11) / 8<br>
+                        = 2</td>
+                </tr>
+            </tbody>
+        </table>
+    </li>
+    <li><b>結論：</b><br>NAGMA 非陰離子間隙代謝性酸中毒
+    </li>
+</ol>
+{% endblock %}
 {% block answer_button %}
-<div class="diagnosis_2button_block">
-    <button class="wrong2 answer2"><a>NAGMA非陰離子<br>間隙代謝性酸中毒</a></button>
-    <button class="right2 answer2"><a>NAGMA非陰離子<br>間隙代謝性酸中毒</a></button>
+<div class="diagnosis_1layer_block">
+    <div class="diagnosis_1layer_back_wrong"><button class="wrong_1 answer_1"><a>代謝性酸中毒</a></button></div>
+    <div class="diagnosis_1layer_back_wrong"><button class="wrong_1 answer_1"><a>代謝性酸中毒</a></button></div>
+    <div class="diagnosis_1layer_back_right"><button class="right_1 answer_1"><a>代謝性酸中毒</a></button></div>
+    <div class="diagnosis_1layer_back_wrong"><button class="wrong_1 answer_1"><a>代謝性酸中毒</a></button></div>
 </div>
-<div class="diagnosis_5button_block">
-    <button class="wrong5 answer5"><a>NAGMA非陰離子<br>間隙代謝性酸中毒</a></button>
-    <button class="wrong5 answer5"><a>NAGMA非陰離子<br>間隙代謝性酸中毒</a></button>
-    <button class="right5 answer5"><a>NAGMA非陰離子<br>間隙代謝性酸中毒</a></button>
-    <button class="wrong5 answer5"><a>NAGMA非陰離子<br>間隙代謝性酸中毒</a></button>
-    <button class="wrong5 answer5"><a>NAGMA非陰離子<br>間隙代謝性酸中毒</a></button>
+<div class="diagnosis_2layer_block wrong_block">
+    <button class="wrong_2 answer_2"><a>正常AG酸中毒</a></button>
+    <button class="wrong_2 answer_2"><a>單純高AG酸中毒</a></button>
+    <button class="wrong_2 answer_2"><a>高AG酸中毒合併正常AG酸中毒</a></button>
+    <button class="wrong_2 answer_2"><a>高AG酸中毒合併代謝性鹼中毒</a></button>
+</div>
+<div class="diagnosis_2layer_block wrong_block">
+    <button class="wrong_2 answer_2"><a>代謝性酸中毒</a></button>
+</div>
+
+<div class="diagnosis_2layer_block right_block">
+    <button class="right_2 answer_2"><a>急性呼吸性酸中毒</a></button>
+    <button class="wrong_2 answer_2"><a>慢性呼吸性酸中毒</a></button>
+</div>
+<div class="diagnosis_2layer_block wrong_block">
+    <button class="wrong_2 answer_2"><a>急性呼吸性鹼中毒</a></button>
+    <button class="wrong_2 answer_2"><a>慢性呼吸性鹼中毒</a></button>
 </div>
 {% endblock %}
 {% block additional %}
@@ -42,3 +133,4 @@
 </ol>
 
 {% endblock %}
+
