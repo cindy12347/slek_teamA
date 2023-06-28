@@ -64,6 +64,14 @@ button_2.forEach(n => n.addEventListener("click", ()=> {
     wrong_2.forEach(n => n.classList.toggle("active"));
     right_2.disabled = true;
     wrong_2.forEach(n => n.disabled = true);
+    right_1.classList.remove("active");
+    right_1.classList.toggle("active2");
+    diagnosis_1layer_back_right.classList.remove("active");
+    diagnosis_1layer_back_right.classList.toggle("active2");
+    right_block.classList.toggle("active");
+    
+
+    
 
 
     additional_block.style.display = "flex";
