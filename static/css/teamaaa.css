@@ -295,7 +295,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding:1%;
+    padding:0% 1%;
 }
 
 .diagnosis_5button_block {
@@ -305,7 +305,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding:1%;
+    padding:0% 1%;
 }
 .hidden {
     display: none;
