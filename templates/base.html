@@ -38,10 +38,12 @@
                     <li class="navbar_item"><a href="#" class="navbar_link">17</a></li>
                     <li class="navbar_item"><a href="#" class="navbar_link"></a></li>
                 </ol>
+                
                 <div class="navbar_arrow_ham">
-                  {% block arrow %}
-                  {% endblock %}
-                  
+                  <div class="navbar_reload">
+                    <a href="{{ url_for('pages', page='index') }}"><i class="fa-solid fa-rotate-right fa-2x" style="color:white"></i></a>
+                  </div>
+                  {% block arrow %}{% endblock %}
                   <div class="navbar_hamburger">
                       <span class="bar"></span>
                       <span class="bar"></span>
@@ -110,7 +112,14 @@
                 {% block additional %}{% endblock %}
 
             </div>
-            
+            <div class="footer_block">
+              <div class="footer_icon">
+                <a target="_blank" href="https://www.facebook.com/slekmed"><i class="fab fa-facebook-f" style="color:white;"></i></a>
+                <a target="_blank" href="https://www.instagram.com/slekmed/"><i class="fab fa-instagram" style="color:white;"></i></a>
+                <a target="_blank" href="mailto:slekmed@gmail.com"><i class="fa-solid fa-envelope" style="color:white;"></i></a>
+                <a target="_blank" href="https://www.slekmed.com/"><i class="fa-regular fa-globe" style="color:white;"></i></i></i></a>
+              </div>
+            </div>
         </div>
 
         

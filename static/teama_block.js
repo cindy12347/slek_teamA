@@ -1,3 +1,4 @@
+const reload = document.querySelector(".navbar_reload");
 const hamburger = document.querySelector(".navbar_hamburger");
 const arrow = document.querySelector(".navbar_arrow");
 const navbar_menu = document.querySelector(".navbar_menu");
@@ -19,6 +20,7 @@ const diagnosis_2button_block = document.querySelector(".diagnosis_2button_block
 const diagnosis_5button_block = document.querySelector(".diagnosis_5button_block");
 const answer2 = document.querySelector("#answer2");
 const answer5 = document.querySelector("#answer5");
+
 
 
 hamburger.addEventListener("click", () => {
