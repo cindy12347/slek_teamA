@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="SLEK self-learning enjoy knowledge">
+        <meta name="description" content="這是SLEK發行的互動式教具呦！">
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'all.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'css/all.min.css') }}">
+        <link rel="shortcut icon" href="https://github.com/cindy12347/SLEK_teamB/blob/main/src/slek.png?raw=true"/>
+        <link href="{{ url_for('static', filename = 'css/teamaaa.css') }}" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="main">
+                <div class="data_block_window">
+                    <table class="data_table_window">
+                        <tr>
+                          <td class="data_table_left">PaO<sub>2</sub></td>
+                          <td class="data_table_right">{% block PaO2 %}{% endblock %}mmHg</th>
+                        </tr>
+                        <tr>
+                          <td class="data_table_left">PaCO<sub>2</sub></td>
+                          <td class="data_table_right">{% block PaCO2 %}{% endblock %}mmHg</td>
+                        </tr>
+                        <tr>
+                          <td class="data_table_left">HCO3<sup>-</sup></td>
+                          <td class="data_table_right">{% block HCO3 %}{% endblock %}mEq/L</td>
+                        </tr>
+                        <tr>
+                          <td class="data_table_left">pH</td>
+                          <td class="data_table_right">{% block pH %}{% endblock %}</td>
+                        </tr>
+                        <tr>
+                          <td class="data_table_left">Na<sup>+</sup></td>
+                          <td class="data_table_right">{% block Na %}{% endblock %}mEq/L</td>
+                        </tr>
+                        <tr>
+                          <td class="data_table_left">Cl<sup>-</sup></td>
+                          <td class="data_table_right">{% block Cl %}{% endblock %}mEq/L</td>
+                        </tr>
+                        <tr>
+                          <td class="data_table_left">Hb</td>
+                          <td class="data_table_right">{% block Hb %}{% endblock %}g/dL</td>
+                        </tr>
+                        <tr>
+                          <td class="data_table_left">Albumin</td>
+                          <td class="data_table_right">{% block Albumin %}{% endblock %}g/L</td>
+                        </tr>
+                    </table>
+                      
+                    
+                  </div>
+            
+        </div>
+
+        
+        
+        <script src="{{ url_for('static', filename = 'teama_block.js') }}"></script>
+        <script src="{{ url_for('static', filename = 'jquery.js') }}"></script>
+    
+    </body>
+</html>
+    

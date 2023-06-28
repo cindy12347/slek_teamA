@@ -22,13 +22,76 @@
 {% block Albumin %}1{% endblock %}
 {% block ref_list %}
 <ol class="ref_list">
-    <li>判斷數值：<br>→pH較正常低，可知為「酸中毒」，由於PaCO2與[HCO3-]-皆低於正常值，表示為體內[HCO3-]低與排出CO2低，因此為代謝酸中毒
+    <li><b>判斷數值：</b><br>→pH較正常低，可知為「酸中毒」，由於PaCO2與[HCO3-]-皆低於正常值，表示為體內[HCO3-]低與排出CO2低，因此為代謝酸中毒
+        <table class="ref_table_num">
+            <thead>
+                <tr>
+                    <td></td>
+                    <td>pH</td>
+                    <td>PaCO<sub>2</sub></td>
+                    <td>HCO3<sup>-</sup></td>
+                    <td>PaO<sub>2</sub></td>
+                </tr>
+            </thead>
+            <tbody>                                      
+                <tr>
+                    <td>正常值</td>
+                    <td>7.35-7.45</td>
+                    <td>35-45 mmHg</td>
+                    <td>22-26 mEq/L</td>
+                    <td>80-100 mmHg</td>
+                </tr>
+                <tr>
+                    <td>Case</td>
+                    <td>7.33</td>
+                    <td>33</td>
+                    <td>18</td>
+                    <td>95</td>
+                </tr>
+                <tr>
+                    <td>判斷</td>
+                    <td>過低</td>
+                    <td>過低</td>
+                    <td>過低</td>
+                    <td>正常</td>
+                </tr>
+            </tbody>
+        </table>
     </li>
-    <li>判斷急性或慢性：<br>代謝性酸中毒難以從數據判斷急性或慢性，在此忽略不討論。
+    <li><b>判斷急性或慢性：</b><br>代謝性酸中毒難以從數據判斷急性或慢性，在此忽略不討論。
     </li>
-    <li>Anion gap：<br>結果：AG實際值< AG預估值，屬於非陰離子間隙代謝性酸中毒(NAGMA)
+    <li><b>Anion gap：</b><br>結果：AG實際值< AG預估值，屬於非陰離子間隙代謝性酸中毒(NAGMA)
+        <table class="ref_table_eq">
+            <thead>
+                <tr>
+                    <td>AG預估值</td>
+                    <td>AG實際值</td>
+                    <td>ΔHCO3<sup>-</sup></td>
+                    <td>Δ/Δ</td>
+                </tr>
+            </thead>
+            <tbody>                                      
+                <tr>
+                    <td>= 2.5 * albumin<br>
+                        = 2.5 * 4(g/dL)<br>
+                        = 10
+                    </td>
+                    <td>= Na<sup>+</sup> - (Cl<sup>-</sup> + HCO3<sup>-</sup>)<br>
+                        = 125 - (99 + 18)<br>
+                        = 8
+                    </td>
+                    <td>= 24 - HCO3<sup>-</sup><br>
+                        = 24 - 16<br>
+                        = 8
+                    </td>
+                    <td>= ΔAG / ΔHCO3<sup>-</sup><br>
+                        = (27 - 11) / 8<br>
+                        = 2</td>
+                </tr>
+            </tbody>
+        </table>
     </li>
-    <li>結論：<br>NAGMA 非陰離子間隙代謝性酸中毒
+    <li><b>結論：</b><br>NAGMA 非陰離子間隙代謝性酸中毒
     </li>
 </ol>
 {% endblock %}

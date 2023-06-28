@@ -5,10 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="keywords" content="SLEK self-learning enjoy knowledge">
         <meta name="description" content="這是SLEK發行的互動式教具呦！">
-        <link rel="stylesheet" href="{{ url_for('static', filename = 'css/all.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'fontawesome/css/all.css') }}">
         <link rel="shortcut icon" href="https://github.com/cindy12347/SLEK_teamB/blob/main/src/slek.png?raw=true"/>
         <link href="{{ url_for('static', filename = 'css/teamaaa.css') }}" rel="stylesheet">
-    </head>
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <script src="{{ url_for('static', filename='static/fontawesome/js/fontawesome.js')}}"></script>
+        <script src="{{ url_for('static', filename='static/fontawesome/js/solid.js')}}"></script>
+      </head>
     <body>
         <div class="main">
             <nav class="navbar">
@@ -86,13 +89,17 @@
                           <td class="data_table_right">{% block Albumin %}{% endblock %}g/L</td>
                         </tr>
                     </table>
+                    <p style="margin-top:3%">● 點我看
+                      <a class="data_ref_table_window"style="text-decoration:  none;"href="{{ url_for('pages', page='reference_table') }}"  onclick="window.open('reference_table', 'newwindow', 'width=400,height=400'); 
+                      return false;">參考數據</a>
+                    </p>
                 </div>
                 <div class="ref_block">
                     <div class="ref_click">
-                        <a onclick="book_click()" ><i class="fa-solid fa-book fa-8x" style="margin-bottom:10%;"></i></a>
-                        <p>點我看分析！</p>
+                        <a onclick="book_click()" ><i class="fa-solid fa-book fa-8x" aria-hidden="true" style="margin-bottom:10%; color:#565A5C"></i></a>
+                        <p>點我看分析</p>
                     </div>
-                        {% block ref_list %}{% endblock %}
+                    {% block ref_list %}{% endblock %}
                 </div>
 
             </div>
