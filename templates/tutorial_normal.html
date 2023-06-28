@@ -96,16 +96,29 @@
 </ol>
 {% endblock %}
 {% block answer_button %}
-<div class="diagnosis_2button_block">
-    <button class="wrong2 answer2"><a>NAGMA非陰離子<br>間隙代謝性酸中毒</a></button>
-    <button class="right2 answer2"><a>NAGMA非陰離子<br>間隙代謝性酸中毒</a></button>
+<div class="diagnosis_1layer_block">
+    <div class="diagnosis_1layer_back_wrong"><button class="wrong_1 answer_1"><a>代謝性酸中毒</a></button></div>
+    <div class="diagnosis_1layer_back_wrong"><button class="wrong_1 answer_1"><a>代謝性酸中毒</a></button></div>
+    <div class="diagnosis_1layer_back_right"><button class="right_1 answer_1"><a>代謝性酸中毒</a></button></div>
+    <div class="diagnosis_1layer_back_wrong"><button class="wrong_1 answer_1"><a>代謝性酸中毒</a></button></div>
 </div>
-<div class="diagnosis_5button_block">
-    <button class="wrong5 answer5"><a>NAGMA非陰離子<br>間隙代謝性酸中毒</a></button>
-    <button class="wrong5 answer5"><a>NAGMA非陰離子<br>間隙代謝性酸中毒</a></button>
-    <button class="right5 answer5"><a>NAGMA非陰離子<br>間隙代謝性酸中毒</a></button>
-    <button class="wrong5 answer5"><a>NAGMA非陰離子<br>間隙代謝性酸中毒</a></button>
-    <button class="wrong5 answer5"><a>NAGMA非陰離子<br>間隙代謝性酸中毒</a></button>
+<div class="diagnosis_2layer1_block wrong_block">
+    <button class="wrong_2 answer_2"><a>正常AG酸中毒</a></button>
+    <button class="wrong_2 answer_2"><a>單純高AG酸中毒</a></button>
+    <button class="wrong_2 answer_2"><a>高AG酸中毒合併正常AG酸中毒</a></button>
+    <button class="wrong_2 answer_2"><a>高AG酸中毒合併代謝性鹼中毒</a></button>
+</div>
+<div class="diagnosis_2layer2_block wrong_block">
+    <button class="wrong_2 answer_2"><a>代謝性酸中毒</a></button>
+</div>
+
+<div class="diagnosis_2layer3_block right_block">
+    <button class="right_2 answer_2"><a>急性呼吸性酸中毒</a></button>
+    <button class="wrong_2 answer_2"><a>慢性呼吸性酸中毒</a></button>
+</div>
+<div class="diagnosis_2layer4_block wrong_block">
+    <button class="wrong_2 answer_2"><a>急性呼吸性鹼中毒</a></button>
+    <button class="wrong_2 answer_2"><a>慢性呼吸性鹼中毒</a></button>
 </div>
 {% endblock %}
 {% block additional %}

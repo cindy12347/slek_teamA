@@ -98,10 +98,10 @@ body {
     color: #565A5C;
 }
 .data_block a {
-    color:#223D6D;
+    color:#565A5C;
 }
 .data_block a:hover {
-    color:lightblue;
+    color:white;
 }
 .data_block_window {
     display:flex;
@@ -134,7 +134,7 @@ body {
     width:100%;
     padding-left:2%;
     padding-right:2%;
-    height:120px;
+    height:150px;
 }
 
 .additional_block {
@@ -287,25 +287,103 @@ body {
     text-align:center;
     border: 2px solid #dddfe1;
 }
-.diagnosis_2button_block {
+.diagnosis_1layer_block {
     display:flex;
     visibility: visible;
     opacity: 100;
     flex-direction:row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
     padding:0% 1%;
 }
+.diagnosis_1layer_back_wrong {
+    height: 80px;
+    width:20%;
+    background-color:lightgray;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.diagnosis_1layer_back_right {
+    height: 80px;
+    width:20%;
+    background-color:lightgray;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.diagnosis_1layer_back_wrong.active {
+    height: 80px;
+    width:20%;
+    background-color:lightgray;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.diagnosis_1layer_back_right.active {
+    height: 80px;
+    width:20%;
+    background-color:lightgreen;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
 
-.diagnosis_5button_block {
+.diagnosis_2layer1_block {
     display: none;
-    visibility: visible;
     flex-direction:row;
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding:0% 1%;
+    padding:2% 2%;
+    border-radius: 10px;
+}
+.diagnosis_2layer2_block {
+    display: none;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding:2% 2%;
+    border-radius: 10px;
+}
+.diagnosis_2layer3_block {
+    display: none;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding:2% 2%;
+    border-radius: 10px;
+}
+.diagnosis_2layer4_block {
+    display: none;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding:2% 2%;
+    border-radius: 10px;
+}
+.right_block {
+    display: none;
+    background-color: lightgreen;
+}
+.wrong_block {
+    background-color: lightgray;
 }
 .hidden {
     display: none;
@@ -315,67 +393,68 @@ body {
   }
 
 
-.answer2{
+.answer_1{
     font-size:14px;
-    width:50%;
-    height:85px;
-    margin-left:.5%;
-    margin-right:.5%;
-    background-color: white;
+    width:80%;
+    height:65px;
+    margin-left:1%;
+    margin-right:1%;
+    background-color: lightgray;
     color:#464646;
-    border-radius: 7px;;
-    border: 2px solid #464646;
+    border-radius: 7px;
+    border: 2px solid lightgray;
     cursor: pointer;
 }
-.answer5{
+.answer_2{
     font-size:14px;
-    width:20%;
-    height:85px;
-    margin-left:.5%;
-    margin-right:.5%;
+    width:80%;
+    height:65px;
+    margin-left:1%;
+    margin-right:1%;
     background-color: white;
-    color:#464646;
+    color:darkgreen;
     border-radius: 7px;;
-    border: 2px solid #464646;
+    border: 2px solid darkgreen;
     cursor: pointer;
 }
+.wrong_1 {
+    text-decoration: none;
+}
+.right_1{
+    text-decoration: none;
+}
+.wrong_1.active{
+    background-color:lightgray;
+    border: 2px solid lightgray;
+    color: white;
+    cursor: auto;
+}
+.right_1.active{
+    background-color: lightgreen;
+    border: 2px solid lightgreen;
+    color: darkgreen;
+    cursor: auto;
+}
+.wrong_2 {
+    text-decoration: none;;
+}
+.right_2 {
+    text-decoration: none;;
+}
 
-.answer:hover{
-    background-color:azure;
+.wrong_2.active{
+    background-color:lightgreen;
+    border: 2px solid lightgreen;
+    color: darkgreen;
+    cursor: auto;
+}
+.right_2.active{
+    background-color: white;
+    border: 2px solid darkgreen;
+    color: darkgreen;
+    cursor: auto;
 }
 
-.wrong2.active{
-    background-color: #DF2935;
-    color: white;
-    border: 2px solid white;
-}
-.right2.active{
-    background-color: #52AA5E;
-    color: white;
-    border: 2px solid white;
-}
-.wrong2 button {
-    text-decoration: none;;
-}
-.right2 button {
-    text-decoration: none;;
-}
-.wrong5.active{
-    background-color: #DF2935;
-    color: white;
-    border: 2px solid white;
-}
-.right5.active{
-    background-color: #52AA5E;
-    color: white;
-    border: 2px solid white;
-}
-.wrong5 button {
-    text-decoration: none;;
-}
-.right5 button {
-    text-decoration: none;;
-}
 
 .navbar_heading {
     font-size: 2rem;
@@ -383,18 +462,31 @@ body {
 
 }
 .navbar_menu{
+    width:100%;
     display: flex;
-    flex-wrap:wrap;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    gap: 60px;
     height: 100px;
 }
-.navbar_menu li{
-    list-style:none;
+.navbar_menu_1 {
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
-.navbar_menu li a{
-    color:#223D6D;
+.navbar_menu_2 {
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.navbar_menu_1 div a {
+    text-decoration: none;
+}
+.navbar_menu_2 div a {
     text-decoration: none;
 }
 .navbar_link {
@@ -482,10 +574,10 @@ body {
         opacity: 0;
     }
     .navbar_hamburger.active .bar:nth-child(1){
-        transform: translateY(8px) rotate(45deg);
+        transform: translateY(9px) rotate(45deg);
     }
     .navbar_hamburger.active .bar:nth-child(3){
-        transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-9px) rotate(-45deg);
     }
     
 }
