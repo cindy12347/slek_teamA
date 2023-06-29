@@ -138,16 +138,17 @@ body {
 }
 
 .additional_block {
-    display:none;
     flex-direction:column;
     justify-content: center;
     align-items: center;
+    display:none;
     width:100%;
     padding-top: 5%;
     padding-bottom: 5%;
     padding-left:20%;
     padding-right:20%;
-    height:100vh;
+    height:145vh;
+    overflow:scroll;
 }
 .additional_block h3 {
     font-size: 25px;
@@ -157,7 +158,11 @@ body {
 .additional_block li {
     font-size: 17px;
     margin-bottom:2%;
-    line-height: 23px;
+    line-height: 27px;
+}
+.additional_ref {
+    color:lightgray;
+    font-size: 12px;
 }
 
 
@@ -199,7 +204,7 @@ body {
 
 .ref_table_num {
     border-collapse:collapse;
-    width:80%;
+    width:100%;
     
 }
 .ref_table_num thead td{
@@ -219,7 +224,7 @@ body {
 }
 .ref_table_eq {
     border-collapse:collapse;
-    width:80%;
+    width:100%;
     
 }
 .ref_table_eq thead td{

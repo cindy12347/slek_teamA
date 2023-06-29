@@ -38,6 +38,7 @@
                     <div class="navbar_item"><a href="{{ url_for('pages', page='question15') }}" class="navbar_link">15</a></div>
                     <div class="navbar_item"><a href="{{ url_for('pages', page='question16') }}" class="navbar_link">16</a></div>
                     <div class="navbar_item"><a href="{{ url_for('pages', page='question17') }}" class="navbar_link">17</a></div>
+                    <div class="navbar_item"><a href="{{ url_for('pages', page='question18') }}" class="navbar_link">18</a></div>
                     
                   </div>
                   
@@ -65,15 +66,15 @@
                     <table class="data_table">
                         <tr>
                           <td class="data_table_left">PaO<sub>2</sub></td>
-                          <td class="data_table_right">{% block PaO2 %}{% endblock %}mmHg</th>
+                          <td class="data_table_right">{% block PaO2 %}{% endblock %} mmHg</th>
                         </tr>
                         <tr>
                           <td class="data_table_left">PaCO<sub>2</sub></td>
-                          <td class="data_table_right">{% block PaCO2 %}{% endblock %}mmHg</td>
+                          <td class="data_table_right">{% block PaCO2 %}{% endblock %} mmHg</td>
                         </tr>
                         <tr>
                           <td class="data_table_left">HCO3<sup>-</sup></td>
-                          <td class="data_table_right">{% block HCO3 %}{% endblock %}mEq/L</td>
+                          <td class="data_table_right">{% block HCO3 %}{% endblock %} mEq/L</td>
                         </tr>
                         <tr>
                           <td class="data_table_left">pH</td>
@@ -81,19 +82,19 @@
                         </tr>
                         <tr>
                           <td class="data_table_left">Na<sup>+</sup></td>
-                          <td class="data_table_right">{% block Na %}{% endblock %}mEq/L</td>
+                          <td class="data_table_right">{% block Na %}{% endblock %} mEq/L</td>
                         </tr>
                         <tr>
                           <td class="data_table_left">Cl<sup>-</sup></td>
-                          <td class="data_table_right">{% block Cl %}{% endblock %}mEq/L</td>
+                          <td class="data_table_right">{% block Cl %}{% endblock %} mEq/L</td>
                         </tr>
                         <tr>
                           <td class="data_table_left">Hb</td>
-                          <td class="data_table_right">{% block Hb %}{% endblock %}g/dL</td>
+                          <td class="data_table_right">{% block Hb %}{% endblock %} g/dL</td>
                         </tr>
                         <tr>
                           <td class="data_table_left">Albumin</td>
-                          <td class="data_table_right">{% block Albumin %}{% endblock %}g/L</td>
+                          <td class="data_table_right">{% block Albumin %}{% endblock %} g/L</td>
                         </tr>
                     </table>
                     <p style="margin-top:3%">● 點我看
@@ -114,6 +115,7 @@
                 {% block answer_button %}{% endblock %}
             </div>
             <div class="additional_block" id="additional">
+              
                 {% block additional %}{% endblock %}
 
             </div>

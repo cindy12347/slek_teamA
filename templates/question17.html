@@ -2,27 +2,25 @@
 {% block title %}教案十七{% endblock %}
 {% block arrow %}
 <div class="navbar_arrow">
-<a href="{{ url_for('pages', page='question17') }}"><span class="arrow arrow1"></span></a>
-<a href="{{ url_for('pages', page='question17') }}"><span class="arrow arrow2"></span></a>
-<a href="{{ url_for('pages', page='question17') }}"><span class="arrow arrow3"></span></a>
+<a href="{{ url_for('pages', page='question18') }}"><span class="arrow arrow1"></span></a>
+<a href="{{ url_for('pages', page='question18') }}"><span class="arrow arrow2"></span></a>
+<a href="{{ url_for('pages', page='question18') }}"><span class="arrow arrow3"></span></a>
 </div>
 {% endblock %}
 {% block question %}
-有一40歲女性病人被家人送到急診，已嚴重腹瀉多日。病人體溫39度，
-心跳63次/分，呼吸速率30次/分，血壓115/85。你為他做一般抽血檢查與動脈氣體分析，
-也另外做了一些檢驗，重要數據如下：
+有一18歲男性病人先前因嚴重車禍而成為植物人。初步診視病人體溫37.0度，心跳60次/分，呼吸速率10次/分，血壓125/77。你為他做一般抽血檢查與動脈氣體分析，也另外做了一些檢驗，重要數據如下：
 {% endblock %}
-{% block PaO2 %}1{% endblock %}
-{% block PaCO2 %}1{% endblock %}
-{% block HCO3 %}1{% endblock %}
-{% block pH %}1{% endblock %}
-{% block Na %}1{% endblock %}
-{% block Cl %}1{% endblock %}
-{% block Hb %}1{% endblock %}
-{% block Albumin %}1{% endblock %}
+{% block PaO2 %}96{% endblock %}
+{% block PaCO2 %}22{% endblock %}
+{% block HCO3 %}16{% endblock %}
+{% block pH %}7.48{% endblock %}
+{% block Na %}140{% endblock %}
+{% block Cl %}110{% endblock %}
+{% block Hb %}13{% endblock %}
+{% block Albumin %}40{% endblock %}
 {% block ref_list %}
 <ol class="ref_list">
-    <li><b>判斷數值：</b><br>→pH較正常低，可知為「酸中毒」，由於PaCO2與[HCO3-]-皆低於正常值，表示為體內[HCO3-]低與排出CO2低，因此為代謝酸中毒
+    <li><b>判斷數值：</b><br>→pH較正常高，可知為「鹼中毒」，且PaCO2過低，而[HCO3-]偏低，因此為呼吸性鹼中毒。
         <table class="ref_table_num">
             <thead>
                 <tr>
@@ -43,14 +41,14 @@
                 </tr>
                 <tr>
                     <td>Case</td>
-                    <td>7.33</td>
-                    <td>33</td>
-                    <td>18</td>
-                    <td>95</td>
+                    <td>7.48</td>
+                    <td>22 mmHg</td>
+                    <td>16 mEq/L</td>
+                    <td>85 mmHg</td>
                 </tr>
                 <tr>
                     <td>判斷</td>
-                    <td>過低</td>
+                    <td>過高</td>
                     <td>過低</td>
                     <td>過低</td>
                     <td>正常</td>
@@ -58,49 +56,55 @@
             </tbody>
         </table>
     </li>
-    <li><b>判斷急性或慢性：</b><br>代謝性酸中毒難以從數據判斷急性或慢性，在此忽略不討論。
-    </li>
-    <li><b>Anion gap：</b><br>結果：AG實際值< AG預估值，屬於非陰離子間隙代謝性酸中毒(NAGMA)
+    <li><b>判斷急性或慢性：</b><br>
+        當呼吸性酸鹼中毒發生時，腎臟會藉由改變[HCO3-]的吸收補足肺臟無法調節CO2的功能，這個過程稱之為「代償」。若為呼吸酸中毒，腎臟會再吸收[HCO3-]以升高pH值；反之若為呼吸鹼中毒，腎臟會減少再吸收[HCO3-]以降低pH值。腎臟的代償需要一定時間(幾小時~幾天)，依代償的進行程度可以將呼吸性中毒區分為急慢性：<br>
+        （以呼吸性酸中毒為例）<br>
+        - 急性呼吸酸中毒：腎臟尚未進行代償，再吸收的[HCO3-]變化量約為0.1 * ΔPaCO2<br>
+        - 慢性呼吸酸中毒：腎臟已充分進行代償，再吸收的[HCO3-]變化量約為0.35 * ΔPaCO2<br>
         <table class="ref_table_eq">
             <thead>
                 <tr>
-                    <td>AG預估值</td>
-                    <td>AG實際值</td>
-                    <td>ΔHCO3<sup>-</sup></td>
-                    <td>Δ/Δ</td>
+                    <td style="width:15%">檢查<br>項目</td>
+                    <td>Δ[HCO3<sup>-</sup>]與ΔpH<br>實際值</td>
+                    <td>Δ[HCO3<sup>-</sup>]與ΔpH<br>預估值</td>
+                    <td style="width:20%">結果</td>
                 </tr>
             </thead>
             <tbody>                                      
                 <tr>
-                    <td>= 2.5 * albumin<br>
-                        = 2.5 * 4(g/dL)<br>
-                        = 10
+                    <td>[HCO3<sup>-</sup>]<br>與pH</td>
+                    <td>
+                        <b>|ΔHCO3<sup>-</sup>|</b>=|16-24|=8<br>
+                        <b>|ΔpH|</b>=|7.48-7.4|=0.08<br>
+                        <b>|ΔPaCO<sub>2</sub>|</b>=|22-40|=18
                     </td>
-                    <td>= Na<sup>+</sup> - (Cl<sup>-</sup> + HCO3<sup>-</sup>)<br>
-                        = 125 - (99 + 18)<br>
-                        = 8
+                    <td>
+                        <b>急性：</b><br>
+                        <b>|ΔHCO3<sup>-</sup>|</b>= 0.2 * |ΔPaCO<sub>2</sub>| = 0.2 * 18 = 3.6<br>
+                        <b>|ΔpH|</b> = 0.008 * |ΔPaCO<sub>2</sub>| = 0.008 * 18 = 0.144<br>
+                        <b>慢性：</b><br>
+                        <b>|ΔHCO3<sup>-</sup>|</b> = 0.4 * |ΔPaCO<sub>2</sub>| = 0.4 * 18 = 7.2<br>
+                        <b>|ΔpH|</b> = 0.003 * |ΔPaCO<sub>2</sub>| = 0.003* 20 = 0.06<br>
                     </td>
-                    <td>= 24 - HCO3<sup>-</sup><br>
-                        = 24 - 16<br>
-                        = 8
+                    <td>
+                        [ΔHCO3<sup>-</sup>]與pH變化量趨近於慢性預估值，腎臟有代償，因此為慢性呼吸性鹼中毒。
                     </td>
-                    <td>= ΔAG / ΔHCO3<sup>-</sup><br>
-                        = (27 - 11) / 8<br>
-                        = 2</td>
                 </tr>
             </tbody>
         </table>
     </li>
-    <li><b>結論：</b><br>NAGMA 非陰離子間隙代謝性酸中毒
+    <li><b>Anion gap：</b><br>結果：呼吸性鹼中毒不需判斷Anion gap。
+    </li>
+    <li><b>結論：</b><br>慢性呼吸性鹼中毒
     </li>
 </ol>
 {% endblock %}
 {% block answer_button %}
 <div class="diagnosis_1layer_block">
     <div class="diagnosis_1layer_back_wrong"><button class="wrong_1 answer_1"><a>代謝性酸中毒</a></button></div>
-    <div class="diagnosis_1layer_back_wrong"><button class="wrong_1 answer_1"><a>代謝性酸中毒</a></button></div>
-    <div class="diagnosis_1layer_back_right"><button class="right_1 answer_1"><a>代謝性酸中毒</a></button></div>
-    <div class="diagnosis_1layer_back_wrong"><button class="wrong_1 answer_1"><a>代謝性酸中毒</a></button></div>
+    <div class="diagnosis_1layer_back_wrong"><button class="wrong_1 answer_1"><a>代謝性鹼中毒</a></button></div>
+    <div class="diagnosis_1layer_back_right"><button class="right_1 answer_1"><a>呼吸性酸中毒</a></button></div>
+    <div class="diagnosis_1layer_back_wrong"><button class="wrong_1 answer_1"><a>呼吸性鹼中毒</a></button></div>
 </div>
 <div class="diagnosis_2layer_block wrong_block">
     <button class="wrong_2 answer_2"><a>正常AG酸中毒</a></button>
@@ -113,8 +117,8 @@
 </div>
 
 <div class="diagnosis_2layer_block right_block">
-    <button class="right_2 answer_2"><a>急性呼吸性酸中毒</a></button>
-    <button class="wrong_2 answer_2"><a>慢性呼吸性酸中毒</a></button>
+    <button class="wrong_2 answer_2"><a>急性呼吸性酸中毒</a></button>
+    <button class="right_2 answer_2"><a>慢性呼吸性酸中毒</a></button>
 </div>
 <div class="diagnosis_2layer_block wrong_block">
     <button class="wrong_2 answer_2"><a>急性呼吸性鹼中毒</a></button>
@@ -124,12 +128,13 @@
 {% block additional %}
 <h3>中毒原因與症狀</h3>
 <ol>
-    <li><b>原因：</b><br>Anion gap=[Na+] – [Cl-] – [HCO3-] = UA(其他陰離子)-UC(其他陽離子)，正常情況下人體內的陽離子和陰離子的總電荷量相同，Anion gap(AG) 可用來評估代謝性酸中毒的原因，其正常值約為albumin*2.5，若AG正常表示酸中毒的原因可能來自於流失[HCO3-]- 同時伴有 Cl- 升高或腎臟減少排出酸
+    <li><b>原因：</b><br>多為過度換氣造成（排出過多的CO2），如缺氧的代償、精神性換氣過度（如：過度換氣症候群）等
     </li>
-    <li><b>症狀：</b><br>身體為了排除多餘的酸會加快呼吸可能引發呼吸困難、噁心、嘔吐、沒有食慾
+    <li><b>症狀：</b><br>症狀較急性呼吸性鹼中毒輕，有頭暈、感覺異常、組織缺氧與低血鉀症等。
     </li>
-    <li><b>教案相關：</b><br>腹瀉會造成腸道內[HCO3-]-大量流失，而[HCO3-]-在體內作為酸鹼緩衝溶劑會中和酸，若[HCO3-]-大量流失則會引發酸中毒。同時結腸的Cl-/[HCO3-]-通道，排出[HCO3-]-時會吸收Cl-，因此排出的糞便中會有較多[HCO3-]-和較少Cl-，體內則反之，體內的Anion gap 無明顯增加。"
+    <li><b>治療：</b><br>減低患者過度換氣之情形，如：精神性可使用鎮定劑；或以長筒、紙袋罩住口鼻，減CO2的呼出與喪失。
     </li>
+    <li><b>其他相關：</b><br>持續性植物狀態（Persistent vegetative state, PVS）俗稱植物人，根據台灣政府身心障礙鑑定表，極重度的植物人，其定義為大腦功能嚴重障礙，完全臥床，無法照顧自己餵食，起居及通便，無法與他人溝通者。</li>
 </ol>
 
 {% endblock %}

@@ -8,21 +8,19 @@
 </div>
 {% endblock %}
 {% block question %}
-有一40歲女性病人被家人送到急診，已嚴重腹瀉多日。病人體溫39度，
-心跳63次/分，呼吸速率30次/分，血壓115/85。你為他做一般抽血檢查與動脈氣體分析，
-也另外做了一些檢驗，重要數據如下：
+有一25歲女性病人於家中洗澡經久不出，家人因擔心報警破門而入後發現病人昏迷不醒，現送到急診，運送過程已先完成插管。初步診視病人體溫36度，心跳65次/分，呼吸速率35次/分，血壓113/75。你為他做一般抽血檢查與動脈氣體分析，也另外做了一些檢驗，重要數據如下：
 {% endblock %}
-{% block PaO2 %}1{% endblock %}
-{% block PaCO2 %}1{% endblock %}
-{% block HCO3 %}1{% endblock %}
-{% block pH %}1{% endblock %}
-{% block Na %}1{% endblock %}
-{% block Cl %}1{% endblock %}
-{% block Hb %}1{% endblock %}
-{% block Albumin %}1{% endblock %}
+{% block PaO2 %}390{% endblock %}
+{% block PaCO2 %}36{% endblock %}
+{% block HCO3 %}16{% endblock %}
+{% block pH %}7.31{% endblock %}
+{% block Na %}141{% endblock %}
+{% block Cl %}98{% endblock %}
+{% block Hb %}12.3{% endblock %}
+{% block Albumin %}41{% endblock %}
 {% block ref_list %}
 <ol class="ref_list">
-    <li><b>判斷數值：</b><br>→pH較正常低，可知為「酸中毒」，由於PaCO2與[HCO3-]-皆低於正常值，表示為體內[HCO3-]低與排出CO2低，因此為代謝酸中毒
+    <li><b>判斷數值：</b><br>→ 由pH值偏低得知有酸中毒情況。僅有[HCO3-]濃度偏低，PaCO2正常，可知為代謝性酸中毒。
         <table class="ref_table_num">
             <thead>
                 <tr>
@@ -43,24 +41,24 @@
                 </tr>
                 <tr>
                     <td>Case</td>
-                    <td>7.33</td>
-                    <td>33</td>
-                    <td>18</td>
-                    <td>95</td>
+                    <td>7.31</td>
+                    <td>36 mmHg</td>
+                    <td>16 mEq/L</td>
+                    <td>390 mmHg</td>
                 </tr>
                 <tr>
                     <td>判斷</td>
                     <td>過低</td>
-                    <td>過低</td>
-                    <td>過低</td>
                     <td>正常</td>
+                    <td>過低</td>
+                    <td>過高</td>
                 </tr>
             </tbody>
         </table>
     </li>
     <li><b>判斷急性或慢性：</b><br>代謝性酸中毒難以從數據判斷急性或慢性，在此忽略不討論。
     </li>
-    <li><b>Anion gap：</b><br>結果：AG實際值< AG預估值，屬於非陰離子間隙代謝性酸中毒(NAGMA)
+    <li><b>Anion gap：</b><br>結果：由AG實際值 > AG預估值，可知為高AG酸中毒(AGMA)，再進一步檢查Δ/Δ=2(介於1~2)，表示為單純高AG酸中毒(AGMA)。
         <table class="ref_table_eq">
             <thead>
                 <tr>
@@ -73,12 +71,12 @@
             <tbody>                                      
                 <tr>
                     <td>= 2.5 * albumin<br>
-                        = 2.5 * 4(g/dL)<br>
-                        = 10
+                        = 2.5 * 4.4(g/dL)<br>
+                        = 11
                     </td>
                     <td>= Na<sup>+</sup> - (Cl<sup>-</sup> + HCO3<sup>-</sup>)<br>
-                        = 125 - (99 + 18)<br>
-                        = 8
+                        = 141 - (98 + 16)<br>
+                        = 27(&gt;11)
                     </td>
                     <td>= 24 - HCO3<sup>-</sup><br>
                         = 24 - 16<br>
@@ -91,29 +89,29 @@
             </tbody>
         </table>
     </li>
-    <li><b>結論：</b><br>NAGMA 非陰離子間隙代謝性酸中毒
+    <li><b>結論：</b><br>單純高AG酸中毒(AGMA)
     </li>
 </ol>
 {% endblock %}
 {% block answer_button %}
 <div class="diagnosis_1layer_block">
-    <div class="diagnosis_1layer_back_wrong"><button class="wrong_1 answer_1"><a>代謝性酸中毒</a></button></div>
-    <div class="diagnosis_1layer_back_wrong"><button class="wrong_1 answer_1"><a>代謝性酸中毒</a></button></div>
     <div class="diagnosis_1layer_back_right"><button class="right_1 answer_1"><a>代謝性酸中毒</a></button></div>
-    <div class="diagnosis_1layer_back_wrong"><button class="wrong_1 answer_1"><a>代謝性酸中毒</a></button></div>
+    <div class="diagnosis_1layer_back_wrong"><button class="wrong_1 answer_1"><a>代謝性鹼中毒</a></button></div>
+    <div class="diagnosis_1layer_back_wrong"><button class="wrong_1 answer_1"><a>呼吸性酸中毒</a></button></div>
+    <div class="diagnosis_1layer_back_wrong"><button class="wrong_1 answer_1"><a>呼吸性鹼中毒</a></button></div>
 </div>
-<div class="diagnosis_2layer_block wrong_block">
+<div class="diagnosis_2layer_block right_block">
     <button class="wrong_2 answer_2"><a>正常AG酸中毒</a></button>
-    <button class="wrong_2 answer_2"><a>單純高AG酸中毒</a></button>
+    <button class="right_2 answer_2"><a>單純高AG酸中毒</a></button>
     <button class="wrong_2 answer_2"><a>高AG酸中毒合併正常AG酸中毒</a></button>
     <button class="wrong_2 answer_2"><a>高AG酸中毒合併代謝性鹼中毒</a></button>
 </div>
 <div class="diagnosis_2layer_block wrong_block">
-    <button class="wrong_2 answer_2"><a>代謝性酸中毒</a></button>
+    <button class="wrong_2 answer_2"><a>代謝性鹼中毒</a></button>
 </div>
 
-<div class="diagnosis_2layer_block right_block">
-    <button class="right_2 answer_2"><a>急性呼吸性酸中毒</a></button>
+<div class="diagnosis_2layer_block wrong_block">
+    <button class="wrong_2 answer_2"><a>急性呼吸性酸中毒</a></button>
     <button class="wrong_2 answer_2"><a>慢性呼吸性酸中毒</a></button>
 </div>
 <div class="diagnosis_2layer_block wrong_block">
@@ -124,12 +122,25 @@
 {% block additional %}
 <h3>中毒原因與症狀</h3>
 <ol>
-    <li><b>原因：</b><br>Anion gap=[Na+] – [Cl-] – [HCO3-] = UA(其他陰離子)-UC(其他陽離子)，正常情況下人體內的陽離子和陰離子的總電荷量相同，Anion gap(AG) 可用來評估代謝性酸中毒的原因，其正常值約為albumin*2.5，若AG正常表示酸中毒的原因可能來自於流失[HCO3-]- 同時伴有 Cl- 升高或腎臟減少排出酸
+    <li><b>原因：</b><br>AGMA通常是身體中累積或產生過多酸性分子所導致。如：腎臟無法代謝尿酸、磷酸、或是攝取過多會在代謝後產生酸性分子的物質等原因。
     </li>
-    <li><b>症狀：</b><br>身體為了排除多餘的酸會加快呼吸可能引發呼吸困難、噁心、嘔吐、沒有食慾
+    <li><b>診斷：</b><br>
+        <ol style=" list-style-type: lower-alpha;padding-left:25px; margin-top:15px">
+            <li>本教案因一氧化碳中毒入院，一氧化碳血紅素（HbCO）高達41%（10%以上有臨床診斷意義，30%以上為嚴重個案），因此酸中毒可能由一氧化碳引起。
+            </li>
+            <li>一氧化碳中毒引發酸中毒的機制如下：
+                <ol style=" list-style-type: lower-roman;padding-left:25px; margin-top:15px">
+                    <li>一氧化碳會與紅血球中的血紅素結合，導致氧氣運送能力下降，且其與血紅素結合能力為氧氣的200倍。一氧化碳也會阻礙粒線體中的電子傳遞鏈，抑制有氧呼吸。因此，重度一氧化碳中毒下，身體細胞高度仰賴發酵作用取得能量。
+
+                    </li>
+                    <li>人體發酵作用會產生乳酸，而乳酸是酸性分子，故最終造成血液pH值上升；乳酸根離子帶負電，並且不是計算anion gap的依據，因此會造成anion gap上升。
+
+                    </li>
+                </ol>
+            </li>
+        </ol>身體為了排除多餘的酸會加快呼吸可能引發呼吸困難、噁心、嘔吐、沒有食慾
     </li>
-    <li><b>教案相關：</b><br>腹瀉會造成腸道內[HCO3-]-大量流失，而[HCO3-]-在體內作為酸鹼緩衝溶劑會中和酸，若[HCO3-]-大量流失則會引發酸中毒。同時結腸的Cl-/[HCO3-]-通道，排出[HCO3-]-時會吸收Cl-，因此排出的糞便中會有較多[HCO3-]-和較少Cl-，體內則反之，體內的Anion gap 無明顯增加。"
-    </li>
+    <li><b>教案相關：</b><br>因為有插管治療，PaO2數值會很高，屬於預期之中的狀況。</li>
 </ol>
 
 {% endblock %}
