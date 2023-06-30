@@ -133,7 +133,7 @@ body {
     width:100%;
     padding-left:3%;
     padding-right:3%;
-    height:180px;
+    height:200px;
 }
 
 .additional_block {
@@ -364,9 +364,9 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding:2% 2%;
+    padding:3% 2%;
     border-radius: 10px;
-    min-height: 120px;
+    min-height: 130px;
 }
 
 .right_block {
@@ -406,9 +406,9 @@ body {
     margin-left:1%;
     margin-right:1%;
     background-color: white;
-    color:darkgreen;
+    color:#4E7E4E;
     border-radius: 7px;;
-    border: 2px solid darkgreen;
+    border: 2px solid #4E7E4E;
     cursor: pointer;
 }
 .wrong_1 {
@@ -426,7 +426,7 @@ body {
 .right_1.active{
     background-color: lightgreen;
     border: 2px solid lightgreen;
-    color: darkgreen;
+    color: #4E7E4E;
     cursor: auto;
 }
 .right_1.active2{
@@ -490,14 +490,11 @@ body {
     text-decoration: none;
 }
 .navbar_link {
+    color:#223D6D;
     transition: 0.7s ease;
 }
 .navbar_link:hover {
     color:bisque;
-}
-.navbar_link:visited {
-    color:#223D6D;
-
 }
 .navbar_reload {
     cursor: pointer;
