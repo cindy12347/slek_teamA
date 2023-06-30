@@ -61,7 +61,6 @@ body {
     padding: 2% 3%;
     background-color:white;
     margin-top:75px;
-    height:20%;
     color: black;
     min-height: 100px;
     font-size:17px;
@@ -563,6 +562,7 @@ body {
         text-align: center; 
         transition: 0.3s;
         z-index: 10;
+        height:150px;
     }
     .navbar_menu.active {
         left: 0;
@@ -591,7 +591,10 @@ body {
         min-width:180px;
     }
     .question_block {
-        height:50%;
+        min-height:150px;
+    }
+    .navbar_menu {
+
     }
     .navbar_arrow_ham {
         width: 35%;
