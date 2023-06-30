@@ -131,9 +131,9 @@ body {
     justify-content: center;
     align-items: center;
     width:100%;
-    padding-left:2%;
-    padding-right:2%;
-    height:150px;
+    padding-left:3%;
+    padding-right:3%;
+    height:180px;
 }
 
 .additional_block {
@@ -366,6 +366,7 @@ body {
     width: 100%;
     padding:2% 2%;
     border-radius: 10px;
+    min-height: 120px;
 }
 
 .right_block {
