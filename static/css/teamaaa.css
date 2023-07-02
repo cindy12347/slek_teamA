@@ -122,6 +122,7 @@ body {
     padding-left:5%;
     padding-bottom:1%;
     overflow:scroll;
+    overflow-x:scroll;
     
     
 }
@@ -260,6 +261,7 @@ body {
 .ref_list {
     display:none;
     height:100%;
+    
     
 }
 .ref_list.active {
