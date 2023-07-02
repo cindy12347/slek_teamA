@@ -1,0 +1,266 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="SLEK self-learning enjoy knowledge">
+        <meta name="description" content="這是SLEK發行的互動式教具呦！">
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'fontawesome/css/all.css') }}">
+        <link rel="shortcut icon" href="https://github.com/cindy12347/SLEK_teamB/blob/main/src/slek.png?raw=true"/>
+        <link href="{{ url_for('static', filename = 'css/teamaaa.css') }}" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <script src="{{ url_for('static', filename='static/fontawesome/js/fontawesome.js')}}"></script>
+        <script src="{{ url_for('static', filename='static/fontawesome/js/solid.js')}}"></script>
+      </head>
+    <body>
+        <div class="main">
+            <nav class="navbar">
+                <h1 class="navbar_heading">教案十一</h1>
+                
+                <div class="navbar_menu">
+                  <div class="navbar_menu_1">
+                    <div class="navbar_item"><a href="{{ url_for('pages', page='question1') }}" class="navbar_link">1</a></div>
+                    <div class="navbar_item"><a href="{{ url_for('pages', page='question2') }}" class="navbar_link">2</a></div>
+                    <div class="navbar_item"><a href="{{ url_for('pages', page='question3') }}" class="navbar_link">3</a></div>
+                    <div class="navbar_item"><a href="{{ url_for('pages', page='question4') }}" class="navbar_link">4</a></div>
+                    <div class="navbar_item"><a href="{{ url_for('pages', page='question5') }}" class="navbar_link">5</a></div>
+                    <div class="navbar_item"><a href="{{ url_for('pages', page='question6') }}" class="navbar_link">6</a></div>
+                    <div class="navbar_item"><a href="{{ url_for('pages', page='question7') }}" class="navbar_link">7</a></div>
+                    <div class="navbar_item"><a href="{{ url_for('pages', page='question8') }}" class="navbar_link">8</a></div>
+                    <div class="navbar_item"><a href="{{ url_for('pages', page='question9') }}" class="navbar_link">9</a></div>
+                    <div class="navbar_item"><a href="{{ url_for('pages', page='question10') }}" class="navbar_link">10</a></div>
+                  </div>
+                  <div class="navbar_menu_2">
+                    <div class="navbar_item"><a href="{{ url_for('pages', page='question11_new') }}" class="navbar_link">11</a></div>
+                    <div class="navbar_item"><a href="{{ url_for('pages', page='question12') }}" class="navbar_link">12</a></div>
+                    <div class="navbar_item"><a href="{{ url_for('pages', page='question13') }}" class="navbar_link">13</a></div>
+                    <div class="navbar_item"><a href="{{ url_for('pages', page='question14_new') }}" class="navbar_link">14</a></div>
+                    <div class="navbar_item"><a href="{{ url_for('pages', page='question15') }}" class="navbar_link">15</a></div>
+                    <div class="navbar_item"><a href="{{ url_for('pages', page='question16') }}" class="navbar_link">16</a></div>
+                    <div class="navbar_item"><a href="{{ url_for('pages', page='question17') }}" class="navbar_link">17</a></div>
+                    <div class="navbar_item"><a href="{{ url_for('pages', page='question18') }}" class="navbar_link">18</a></div>
+                    
+                  </div>
+                  
+                  
+                </div>
+                
+                <div class="navbar_arrow_ham">
+                  <div class="navbar_reload">
+                    <a href="{{ url_for('pages', page='index') }}"><i class="fa-solid fa-rotate-right fa-2x" style="color:white"></i></a>
+                  </div>
+                  <div class="navbar_arrow">
+                    <a href="{{ url_for('pages', page='question12') }}"><span class="arrow arrow1"></span></a>
+                    <a href="{{ url_for('pages', page='question12') }}"><span class="arrow arrow2"></span></a>
+                    <a href="{{ url_for('pages', page='question12') }}"><span class="arrow arrow3"></span></a>
+                    </div>
+                  <div class="navbar_hamburger" style="margin-left:6px">
+                      <span class="bar"></span>
+                      <span class="bar"></span>
+                      <span class="bar"></span>
+                  </div>
+                  
+                </div>
+            </nav>
+            <div class="question_block">
+                <p>有一25歲女性病人於家中洗澡經久不出，家人因擔心報警破門而入後發現病人昏迷不醒，現送到急診，運送過程已先完成插管。初步診視病人體溫36度，心跳65次/分，呼吸速率35次/分，血壓113/75。你為他做一般抽血檢查與動脈氣體分析，也另外做了一些檢驗，重要數據如下：
+
+                </p>
+            </div>
+            <div class="data_ref_block">
+                <div class="data_block">
+                    <table class="data_table">
+                        <tr>
+                          <td class="data_table_left">PaO<sub>2</sub></td>
+                          <td class="data_table_right">390 mmHg</th>
+                        </tr>
+                        <tr>
+                          <td class="data_table_left">PaCO<sub>2</sub></td>
+                          <td class="data_table_right">36 mmHg</td>
+                        </tr>
+                        <tr>
+                          <td class="data_table_left">HCO<sub>3</sub><sup>-</sup></td>
+                          <td class="data_table_right">16 mEq/L</td>
+                        </tr>
+                        <tr>
+                          <td class="data_table_left">pH</td>
+                          <td class="data_table_right">7.31</td>
+                        </tr>
+                        <tr>
+                          <td class="data_table_left">Na<sup>+</sup></td>
+                          <td class="data_table_right">141 mEq/L</td>
+                        </tr>
+                        <tr>
+                          <td class="data_table_left">Cl<sup>-</sup></td>
+                          <td class="data_table_right">98 mEq/L</td>
+                        </tr>
+                        <tr>
+                          <td class="data_table_left">Hb</td>
+                          <td class="data_table_right">12.3 g/dL</td>
+                        </tr>
+                        <tr>
+                          <td class="data_table_left">COHb</td>
+                          <td class="data_table_right">41%</td>
+                        </tr>
+                        <tr>
+                          <td class="data_table_left">Albumin</td>
+                          <td class="data_table_right">44 g/L</td>
+                        </tr>
+                    </table>
+                    <p style="margin-top:3%">● 點我看
+                      <a class="data_ref_table_window"style="text-decoration:  none;"href="{{ url_for('pages', page='reference_table') }}"  onclick="window.open('reference_table', 'newwindow', 'width=400,height=400'); 
+                      return false;">參考數據</a>
+                    </p>
+                </div>
+                <div class="ref_block">
+                    <div class="ref_click">
+                        <a onclick="book_click()" ><i class="fa-solid fa-book fa-8x" aria-hidden="true" style="margin-bottom:10%; color:#565A5C"></i></a>
+                        <p>點我看分析</p>
+                    </div>
+                    <ol class="ref_list">
+                      <li><b>判斷數值：</b><br>→ 由pH值偏低得知有酸中毒情況。僅有HCO<sub>3</sub><sup>-</sup>濃度偏低，PaCO<sub>2</sub>正常，可知為代謝性酸中毒。
+                          <table class="ref_table_num">
+                              <thead>
+                                  <tr>
+                                      <td></td>
+                                      <td>pH</td>
+                                      <td>PaCO<sub>2</sub></td>
+                                      <td>HCO<sub>3</sub><sup>-</sup></td>
+                                      <td>PaO<sub>2</sub></td>
+                                  </tr>
+                              </thead>
+                              <tbody>                                      
+                                  <tr>
+                                      <td>正常值</td>
+                                      <td>7.35-7.45</td>
+                                      <td>35-45 mmHg</td>
+                                      <td>22-26 mEq/L</td>
+                                      <td>80-100 mmHg</td>
+                                  </tr>
+                                  <tr>
+                                      <td>Case</td>
+                                      <td>7.31</td>
+                                      <td>36 mmHg</td>
+                                      <td>16 mEq/L</td>
+                                      <td>390 mmHg</td>
+                                  </tr>
+                                  <tr>
+                                      <td>判斷</td>
+                                      <td>過低</td>
+                                      <td>正常</td>
+                                      <td>過低</td>
+                                      <td>過高</td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </li>
+                      <li><b>判斷急性或慢性：</b><br>代謝性酸中毒難以從數據判斷急性或慢性，在此忽略不討論。
+                      </li>
+                      <li><b>Anion gap：</b><br>由於AG實際值 > AG預估值，可知為高AG酸中毒(AGMA)，再進一步檢查Δ/Δ=2（介於1~2），表示為單純高AG酸中毒(AGMA)。
+                          <table class="ref_table_eq">
+                              <thead>
+                                  <tr>
+                                      <td>AG預估值</td>
+                                      <td>AG實際值</td>
+                                      <td>ΔHCO<sub>3</sub><sup>-</sup></td>
+                                      <td>Δ/Δ</td>
+                                  </tr>
+                              </thead>
+                              <tbody>                                      
+                                  <tr>
+                                      <td>= 2.5 * albumin<br>
+                                          = 2.5 * 4.4(g/dL)<br>
+                                          = 11
+                                      </td>
+                                      <td>= Na<sup>+</sup> - (Cl<sup>-</sup> + HCO<sub>3</sub><sup>-</sup>)<br>
+                                          = 141 - (98 + 16)<br>
+                                          = 27 (&gt;11)
+                                      </td>
+                                      <td>= 24 - HCO<sub>3</sub><sup>-</sup><br>
+                                          = 24 - 16<br>
+                                          = 8
+                                      </td>
+                                      <td>= ΔAG / ΔHCO<sub>3</sub><sup>-</sup><br>
+                                          = (27 - 11) / 8<br>
+                                          = 2</td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </li>
+                      <li><b>結論：</b><br>單純高AG酸中毒(AGMA)
+                      </li>
+                  </ol>
+                </div>
+
+            </div>
+            <div class="diagnosis_block">
+              <div class="diagnosis_1layer_block">
+                <div class="diagnosis_1layer_back_right"><button class="right_1 answer_1"><a>代謝性酸中毒</a></button></div>
+                <div class="diagnosis_1layer_back_wrong"><button class="wrong_1 answer_1"><a>代謝性鹼中毒</a></button></div>
+                <div class="diagnosis_1layer_back_wrong"><button class="wrong_1 answer_1"><a>呼吸性酸中毒</a></button></div>
+                <div class="diagnosis_1layer_back_wrong"><button class="wrong_1 answer_1"><a>呼吸性鹼中毒</a></button></div>
+            </div>
+            <div class="diagnosis_2layer_block right_block">
+                <button class="wrong_2 answer_2"><a>正常AG酸中毒</a></button>
+                <button class="right_2 answer_2"><a>單純高AG酸中毒</a></button>
+                <button class="wrong_2 answer_2"><a>高AG酸中毒合併正常AG酸中毒</a></button>
+                <button class="wrong_2 answer_2"><a>高AG酸中毒合併代謝性鹼中毒</a></button>
+            </div>
+            <div class="diagnosis_2layer_block wrong_block">
+                <button class="wrong_2 answer_2"><a>代謝性鹼中毒</a></button>
+            </div>
+            
+            <div class="diagnosis_2layer_block wrong_block">
+                <button class="wrong_2 answer_2"><a>急性呼吸性酸中毒</a></button>
+                <button class="wrong_2 answer_2"><a>慢性呼吸性酸中毒</a></button>
+            </div>
+            <div class="diagnosis_2layer_block wrong_block">
+                <button class="wrong_2 answer_2"><a>急性呼吸性鹼中毒</a></button>
+                <button class="wrong_2 answer_2"><a>慢性呼吸性鹼中毒</a></button>
+            </div>
+            </div>
+            <div class="additional_block" id="additional">
+              
+              <h3>中毒原因與症狀</h3>
+              <ol>
+                  <li><b>原因：</b><br>AGMA通常是身體中累積或產生過多酸性分子所導致。如：腎臟無法代謝尿酸、磷酸、或是攝取過多會在代謝後產生酸性分子的物質等原因。
+                  </li>
+                  <li><b>診斷：</b><br>
+                      <ol style=" list-style-type: lower-alpha;padding-left:25px; margin-top:15px">
+                          <li>本教案因一氧化碳中毒入院，一氧化碳血紅素(HbCO)高達41%（10%以上有臨床診斷意義，30%以上為嚴重個案），因此酸中毒可能由一氧化碳引起。
+                          </li>
+                          <li>一氧化碳中毒引發酸中毒的機制如下：
+                              <ol style=" list-style-type: lower-roman;padding-left:25px; margin-top:15px">
+                                  <li>一氧化碳會與紅血球中的血紅素結合，導致氧氣運送能力下降，且其與血紅素結合能力為氧氣的200倍。一氧化碳也會阻礙粒線體中的電子傳遞鏈，抑制有氧呼吸。因此，重度一氧化碳中毒下，身體細胞高度仰賴發酵作用取得能量。
+              
+                                  </li>
+                                  <li>人體發酵作用會產生乳酸，而乳酸是酸性分子，故最終造成血液pH值上升；乳酸根離子帶負電，並且不是計算anion gap的依據，因此會造成anion gap上升。
+              
+                                  </li>
+                              </ol>
+                          </li>
+                      </ol>身體為了排除多餘的酸會加快呼吸可能引發呼吸困難、噁心、嘔吐、沒有食慾
+                  </li>
+                  <li><b>教案相關：</b><br>因為有插管治療，PaO2數值會很高，屬於預期之中的狀況。</li>
+              </ol>
+
+            </div>
+            <div class="footer_block">
+              <div class="footer_icon">
+                <a target="_blank" href="https://www.facebook.com/slekmed"><i class="fab fa-facebook-f fa-2x" style="color:white;"></i></a>
+                <a target="_blank" href="https://www.instagram.com/slekmed/"><i class="fab fa-instagram fa-2x" style="color:white;"></i></a>
+                <a target="_blank" href="mailto:slekmed@gmail.com"><i class="fa-solid fa-envelope fa-2x" style="color:white;"></i></a>
+                <a target="_blank" href="https://www.slekmed.com/"><i class="fa-solid fa-globe fa-2x" style="color:white;"></i></a>
+              </div>
+              <p>SLEKMED</p>
+            </div>
+        </div>
+
+        
+        
+        <script src="{{ url_for('static', filename = 'teama_block.js') }}"></script>
+        <script src="{{ url_for('static', filename = 'jquery.js') }}"></script>
+    
+    </body>
+</html>
+    

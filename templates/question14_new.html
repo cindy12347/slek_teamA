@@ -15,7 +15,7 @@
     <body>
         <div class="main">
             <nav class="navbar">
-                <h1 class="navbar_heading">{% block title %}{% endblock %}</h1>
+                <h1 class="navbar_heading">教案十四</h1>
                 
                 <div class="navbar_menu">
                   <div class="navbar_menu_1">
@@ -31,10 +31,10 @@
                     <div class="navbar_item"><a href="{{ url_for('pages', page='question10') }}" class="navbar_link">10</a></div>
                   </div>
                   <div class="navbar_menu_2">
-                    <div class="navbar_item"><a href="{{ url_for('pages', page='question11_new') }}" class="navbar_link">11</a></div>
+                    <div class="navbar_item"><a href="{{ url_for('pages', page='question11') }}" class="navbar_link">11</a></div>
                     <div class="navbar_item"><a href="{{ url_for('pages', page='question12') }}" class="navbar_link">12</a></div>
                     <div class="navbar_item"><a href="{{ url_for('pages', page='question13') }}" class="navbar_link">13</a></div>
-                    <div class="navbar_item"><a href="{{ url_for('pages', page='question14_new') }}" class="navbar_link">14</a></div>
+                    <div class="navbar_item"><a href="{{ url_for('pages', page='question14') }}" class="navbar_link">14</a></div>
                     <div class="navbar_item"><a href="{{ url_for('pages', page='question15') }}" class="navbar_link">15</a></div>
                     <div class="navbar_item"><a href="{{ url_for('pages', page='question16') }}" class="navbar_link">16</a></div>
                     <div class="navbar_item"><a href="{{ url_for('pages', page='question17') }}" class="navbar_link">17</a></div>
@@ -49,7 +49,11 @@
                   <div class="navbar_reload">
                     <a href="{{ url_for('pages', page='index') }}"><i class="fa-solid fa-rotate-right fa-2x" style="color:white"></i></a>
                   </div>
-                  {% block arrow %}{% endblock %}
+                  <div class="navbar_arrow">
+                    <a href="{{ url_for('pages', page='question15') }}"><span class="arrow arrow1"></span></a>
+                    <a href="{{ url_for('pages', page='question15') }}"><span class="arrow arrow2"></span></a>
+                    <a href="{{ url_for('pages', page='question15') }}"><span class="arrow arrow3"></span></a>
+                    </div>
                   <div class="navbar_hamburger" style="margin-left:6px">
                       <span class="bar"></span>
                       <span class="bar"></span>
@@ -59,7 +63,8 @@
                 </div>
             </nav>
             <div class="question_block">
-                <p>{% block question %}{% endblock %}
+                <p>有一70歲女性病人平時住在安養機構，近日發現食慾不振、疲倦、反射消失因此送醫。初步診視病人體溫37度，心跳65次/分，呼吸速率25次/分，血壓120/70。你為他做一般抽血檢查與動脈氣體分析，也另外做了一些檢驗，重要數據如下：
+
                 </p>
             </div>
             <div class="data_ref_block">
@@ -67,35 +72,39 @@
                     <table class="data_table">
                         <tr>
                           <td class="data_table_left">PaO<sub>2</sub></td>
-                          <td class="data_table_right">{% block PaO2 %}{% endblock %} mmHg</th>
+                          <td class="data_table_right">37 mmHg</th>
                         </tr>
                         <tr>
                           <td class="data_table_left">PaCO<sub>2</sub></td>
-                          <td class="data_table_right">{% block PaCO2 %}{% endblock %} mmHg</td>
+                          <td class="data_table_right">49 mmHg</td>
                         </tr>
                         <tr>
                           <td class="data_table_left">HCO<sub>3</sub><sup>-</sup></td>
-                          <td class="data_table_right">{% block HCO3 %}{% endblock %} mEq/L</td>
+                          <td class="data_table_right">45 mEq/L</td>
                         </tr>
                         <tr>
                           <td class="data_table_left">pH</td>
-                          <td class="data_table_right">{% block pH %}{% endblock %}</td>
+                          <td class="data_table_right">7.58</td>
                         </tr>
                         <tr>
                           <td class="data_table_left">Na<sup>+</sup></td>
-                          <td class="data_table_right">{% block Na %}{% endblock %} mEq/L</td>
+                          <td class="data_table_right">145 mEq/L</td>
                         </tr>
                         <tr>
                           <td class="data_table_left">Cl<sup>-</sup></td>
-                          <td class="data_table_right">{% block Cl %}{% endblock %} mEq/L</td>
+                          <td class="data_table_right">86 mEq/L</td>
+                        </tr>
+                        <tr>
+                          <td class="data_table_left">K<sup>+</sup></td>
+                          <td class="data_table_right">1.9 mEq/L</td>
                         </tr>
                         <tr>
                           <td class="data_table_left">Hb</td>
-                          <td class="data_table_right">{% block Hb %}{% endblock %} g/dL</td>
+                          <td class="data_table_right">9.5 g/dL</td>
                         </tr>
                         <tr>
                           <td class="data_table_left">Albumin</td>
-                          <td class="data_table_right">{% block Albumin %}{% endblock %} g/L</td>
+                          <td class="data_table_right">40 g/L</td>
                         </tr>
                     </table>
                     <p style="margin-top:3%">● 點我看
@@ -108,16 +117,85 @@
                         <a onclick="book_click()" ><i class="fa-solid fa-book fa-8x" aria-hidden="true" style="margin-bottom:10%; color:#565A5C"></i></a>
                         <p>點我看分析</p>
                     </div>
-                    {% block ref_list %}{% endblock %}
+                    <ol class="ref_list">
+                      <li><b>判斷數值：</b><br>→pH較正常高，可知為「鹼中毒」，由於PaCO<sub>2</sub>與HCO<sub>3</sub><sup>-</sup>皆高於正常值，表示為代謝性鹼中毒。
+                          <table class="ref_table_num">
+                              <thead>
+                                  <tr>
+                                      <td></td>
+                                      <td>pH</td>
+                                      <td>PaCO<sub>2</sub></td>
+                                      <td>HCO<sub>3</sub><sup>-</sup></td>
+                                      <td>PaO<sub>2</sub></td>
+                                  </tr>
+                              </thead>
+                              <tbody>                                      
+                                  <tr>
+                                      <td>正常值</td>
+                                      <td>7.35-7.45</td>
+                                      <td>35-45 mmHg</td>
+                                      <td>22-26 mEq/L</td>
+                                      <td>80-100 mmHg</td>
+                                  </tr>
+                                  <tr>
+                                      <td>Case</td>
+                                      <td>7.58</td>
+                                      <td>49 mmHg</td>
+                                      <td>45 mEq/L</td>
+                                      <td>37 mmHg</td>
+                                  </tr>
+                                  <tr>
+                                      <td>判斷</td>
+                                      <td>過高</td>
+                                      <td>過高</td>
+                                      <td>過高</td>
+                                      <td>過低</td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </li>
+                      <li><b>判斷急性或慢性：</b><br>代謝性酸中毒難以從數據判斷急性或慢性，在此忽略不討論。
+                      </li>
+                      <li><b>Anion gap：</b><br>代謝性鹼中毒不需評估Anion gap。
+                      </li>
+                      <li><b>結論：</b><br>代謝性鹼中毒
+                      </li>
+                  </ol>
                 </div>
 
             </div>
             <div class="diagnosis_block">
-                {% block answer_button %}{% endblock %}
+              <div class="diagnosis_1layer_block">
+                <div class="diagnosis_1layer_back_wrong"><button class="wrong_1 answer_1"><a>代謝性酸中毒</a></button></div>
+                <div class="diagnosis_1layer_back_right"><button class="right_1 answer_1"><a>代謝性鹼中毒</a></button></div>
+                <div class="diagnosis_1layer_back_wrong"><button class="wrong_1 answer_1"><a>呼吸性酸中毒</a></button></div>
+                <div class="diagnosis_1layer_back_wrong"><button class="wrong_1 answer_1"><a>呼吸性鹼中毒</a></button></div>
+            </div>
+            <div class="diagnosis_2layer_block wrong_block">
+                <button class="wrong_2 answer_2"><a>正常AG酸中毒</a></button>
+                <button class="wrong_2 answer_2"><a>單純高AG酸中毒</a></button>
+                <button class="wrong_2 answer_2"><a>高AG酸中毒合併正常AG酸中毒</a></button>
+                <button class="wrong_2 answer_2"><a>高AG酸中毒合併代謝性鹼中毒</a></button>
+            </div>
+            <div class="diagnosis_2layer_block right_block">
+                <button class="right_2 answer_2"><a>代謝性鹼中毒</a></button>
+            </div>
+            
+            <div class="diagnosis_2layer_block wrong_block">
+                <button class="wrong_2 answer_2"><a>急性呼吸性酸中毒</a></button>
+                <button class="wrong_2 answer_2"><a>慢性呼吸性酸中毒</a></button>
+            </div>
+            <div class="diagnosis_2layer_block wrong_block">
+                <button class="wrong_2 answer_2"><a>急性呼吸性鹼中毒</a></button>
+                <button class="wrong_2 answer_2"><a>慢性呼吸性鹼中毒</a></button>
+            </div>
             </div>
             <div class="additional_block" id="additional">
               
-                {% block additional %}{% endblock %}
+              <ol>
+                <li><b>原因：</b><br>代謝性鹼中毒起因於血中HCO<sub>3</sub><sup>-</sup>增加或H<sup>+</sup>流失過多。常見原因為嘔吐或鼻胃管抽吸時，造成體內H<sup>+</sup>流失；此外當體液大量流失，啟動身體的RAAS調節機制，或服用特定種類的利尿劑時，都有可能刺激會作用在遠曲小管的醛固酮分泌。醛固酮的作用主要為保鈉水、排氫鉀，因此醛固酮過度分泌可能會造成H<sup>+</sup>過度排出；又或是治療胃酸分泌過多所服用的制酸劑中含有HCO<sub>3</sub><sup>-</sup>，若服用過量也可能會造成代謝性鹼中毒。</li>
+                <li><b>症狀：</b><br>代謝性鹼中毒時常無症狀；而又因為H<sup>+</sup>的排出也會涉及Cl<sup>-</sup>和K<sup>+</sup>的排出，因此有時也會出現與電解質異常相關的症狀如疲倦、肌肉痙攣、多尿、口渴、肌肉無力、肌肉無力或心律失常等。</li>
+            </ol>
 
             </div>
             <div class="footer_block">
