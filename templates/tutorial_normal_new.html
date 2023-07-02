@@ -1,0 +1,232 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="SLEK self-learning enjoy knowledge">
+        <meta name="description" content="這是SLEK發行的互動式教具呦！">
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'fontawesome/css/all.css') }}">
+        <link rel="shortcut icon" href="https://github.com/cindy12347/SLEK_teamB/blob/main/src/slek.png?raw=true"/>
+        <link href="{{ url_for('static', filename = 'css/teamaaa.css') }}" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <script src="{{ url_for('static', filename='static/fontawesome/js/fontawesome.js')}}"></script>
+        <script src="{{ url_for('static', filename='static/fontawesome/js/solid.js')}}"></script>
+        <link href="https://unpkg.com/intro.js/introjs.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/7.0.1/intro.min.js" integrity="sha512-S+RMGQdVq/0Rcx5sEE5TuCNTg4PEpsILZgLM2SM/X4Bz23SFrH8B3iX+HyzI+HlZB6YiAqb9M9IsNi2NRYp2Nw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      </head>
+    <body>
+        <div class="main">
+            <nav class="navbar">
+                <h1 class="navbar_heading">示範：正常</h1>
+                
+                <div class="navbar_menu">
+                  <div class="navbar_menu_1">
+                    <div class="navbar_item"><a href="{{ url_for('pages', page='question1') }}" class="navbar_link">1</a></div>
+                    <div class="navbar_item"><a href="{{ url_for('pages', page='question2') }}" class="navbar_link">2</a></div>
+                    <div class="navbar_item"><a href="{{ url_for('pages', page='question3') }}" class="navbar_link">3</a></div>
+                    <div class="navbar_item"><a href="{{ url_for('pages', page='question4') }}" class="navbar_link">4</a></div>
+                    <div class="navbar_item"><a href="{{ url_for('pages', page='question5') }}" class="navbar_link">5</a></div>
+                    <div class="navbar_item"><a href="{{ url_for('pages', page='question6') }}" class="navbar_link">6</a></div>
+                    <div class="navbar_item"><a href="{{ url_for('pages', page='question7') }}" class="navbar_link">7</a></div>
+                    <div class="navbar_item"><a href="{{ url_for('pages', page='question8') }}" class="navbar_link">8</a></div>
+                    <div class="navbar_item"><a href="{{ url_for('pages', page='question9') }}" class="navbar_link">9</a></div>
+                    <div class="navbar_item"><a href="{{ url_for('pages', page='question10') }}" class="navbar_link">10</a></div>
+                  </div>
+                  <div class="navbar_menu_2">
+                    <div class="navbar_item"><a href="{{ url_for('pages', page='question11') }}" class="navbar_link">11</a></div>
+                    <div class="navbar_item"><a href="{{ url_for('pages', page='question12') }}" class="navbar_link">12</a></div>
+                    <div class="navbar_item"><a href="{{ url_for('pages', page='question13') }}" class="navbar_link">13</a></div>
+                    <div class="navbar_item"><a href="{{ url_for('pages', page='question14') }}" class="navbar_link">14</a></div>
+                    <div class="navbar_item"><a href="{{ url_for('pages', page='question15') }}" class="navbar_link">15</a></div>
+                    <div class="navbar_item"><a href="{{ url_for('pages', page='question16') }}" class="navbar_link">16</a></div>
+                    <div class="navbar_item"><a href="{{ url_for('pages', page='question17') }}" class="navbar_link">17</a></div>
+                    <div class="navbar_item"><a href="{{ url_for('pages', page='question18') }}" class="navbar_link">18</a></div>
+                    
+                  </div>
+                  
+                  
+                </div>
+                
+                <div class="navbar_arrow_ham">
+                  <div class="navbar_reload">
+                    <a href="{{ url_for('pages', page='index') }}"><i class="fa-solid fa-rotate-right fa-2x" style="color:white"></i></a>
+                  </div>
+                  <div class="navbar_arrow">
+                    <a href="{{ url_for('pages', page='question1') }}"><span class="arrow arrow1"></span></a>
+                    <a href="{{ url_for('pages', page='question1') }}"><span class="arrow arrow2"></span></a>
+                    <a href="{{ url_for('pages', page='question1') }}"><span class="arrow arrow3"></span></a>
+                  </div>
+                  <div class="navbar_hamburger" style="margin-left:6px">
+                      <span class="bar"></span>
+                      <span class="bar"></span>
+                      <span class="bar"></span>
+                  </div>
+                </div>
+            </nav>
+            <div class="question_block" id="question">
+                <p>有一25歲女性病人因運動完喘得很厲害來到急診。初步診視病人體溫37.1度，心跳120次/分，呼吸速率30次/分，血壓140/90。你為他做一般抽血檢查與動脈氣體分析，也另外做了一些檢驗，重要數據如下：
+                </p>
+            </div>
+            <div class="data_ref_block">
+                <div class="data_block">
+                    <table class="data_table" data-intro="this is data">
+                        <tr>
+                          <td class="data_table_left">PaO<sub>2</sub></td>
+                          <td class="data_table_right">{% block PaO2 %}{% endblock %} mmHg</th>
+                        </tr>
+                        <tr>
+                          <td class="data_table_left">PaCO<sub>2</sub></td>
+                          <td class="data_table_right">{% block PaCO2 %}{% endblock %} mmHg</td>
+                        </tr>
+                        <tr>
+                          <td class="data_table_left">HCO<sub>3</sub><sup>-</sup></td>
+                          <td class="data_table_right">{% block HCO3 %}{% endblock %} mEq/L</td>
+                        </tr>
+                        <tr>
+                          <td class="data_table_left">pH</td>
+                          <td class="data_table_right">{% block pH %}{% endblock %}</td>
+                        </tr>
+                        <tr>
+                          <td class="data_table_left">Na<sup>+</sup></td>
+                          <td class="data_table_right">{% block Na %}{% endblock %} mEq/L</td>
+                        </tr>
+                        <tr>
+                          <td class="data_table_left">Cl<sup>-</sup></td>
+                          <td class="data_table_right">{% block Cl %}{% endblock %} mEq/L</td>
+                        </tr>
+                        <tr>
+                          <td class="data_table_left">Hb</td>
+                          <td class="data_table_right">{% block Hb %}{% endblock %} g/dL</td>
+                        </tr>
+                        <tr>
+                          <td class="data_table_left">Albumin</td>
+                          <td class="data_table_right">{% block Albumin %}{% endblock %} g/L</td>
+                        </tr>
+                    </table>
+                    <p style="margin-top:3%">● 點我看
+                      <a class="data_ref_table_window"style="text-decoration:  none;"href="{{ url_for('pages', page='reference_table') }}"  onclick="window.open('reference_table', 'newwindow', 'width=400,height=400'); 
+                      return false;">參考數據</a>
+                    </p>
+                </div>
+                <div class="ref_block">
+                    <div class="ref_click hidden">
+                        <a onclick="book_click()" ><i class="fa-solid fa-book fa-8x" aria-hidden="true" style="margin-bottom:10%; color:#565A5C"></i></a>
+                        <p>點我看分析</p>
+                    </div>
+                    <h3 class="steps">這是幫助你測驗對呼吸性與代謝性酸鹼中毒學習成果的教具網頁，<br>
+                      請閱讀完病人的檢驗數據之後：<br></h3>
+                    <h3 class="steps">Step 1：判斷中毒類型並下滑作答</h3>
+                  
+                    <ol class="ref_list.active">
+                        
+                        <li><b>判斷數值：</b><br>經由pH、PaCO2與[HCO3-]的變化判斷為哪一種中毒。
+                            <table class="ref_table_num">
+                                <thead>
+                                    <tr>
+                                        <td></td>
+                                        <td>pH</td>
+                                        <td>PaCO<sub>2</sub></td>
+                                        <td>HCO<sub>3</sub><sup>-</sup></td>
+                                        <td>PaO<sub>2</sub></td>
+                                    </tr>
+                                </thead>
+                                <tbody>                                      
+                                    <tr>
+                                        <td>正常值</td>
+                                        <td>7.35-7.45</td>
+                                        <td>35-45 mmHg</td>
+                                        <td>22-26 mEq/L</td>
+                                        <td>80-100 mmHg</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Case</td>
+                                        <td>7.4</td>
+                                        <td>40</td>
+                                        <td>25.5</td>
+                                        <td>90</td>
+                                    </tr>
+                                    <tr>
+                                        <td>判斷</td>
+                                        <td>正常</td>
+                                        <td>正常</td>
+                                        <td>正常</td>
+                                        <td>正常</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+                        <li><b>判斷急性或慢性：</b><br>代謝性中毒難以從數據判斷急性或慢性，在此忽略不討論，呼吸性中毒需判斷急性與慢性。
+                        </li>
+                        <li><b>Anion gap：</b><br>代謝性酸中毒需經由Anion gap變化判斷屬於哪種代謝酸中毒。
+                        </li>
+                        <li><b>結論：</b><br>得出病人診斷結果。
+                        </li>
+                    </ol>
+                    
+                </div>
+
+            </div>
+            <div class="diagnosis_block">
+              <div class="diagnosis_1layer_block">
+                <div class="diagnosis_1layer_back_right"><button class="right_1 answer_1 answer_normal"><a>正常</a></button></div>
+                <div class="diagnosis_1layer_back_wrong"><button class="wrong_1 answer_1"><a>代謝性酸中毒</a></button></div>
+                <div class="diagnosis_1layer_back_wrong"><button class="wrong_1 answer_1"><a>代謝性酸中毒</a></button></div>
+                <div class="diagnosis_1layer_back_wrong"><button class="wrong_1 answer_1"><a>代謝性酸中毒</a></button></div>
+                <div class="diagnosis_1layer_back_wrong"><button class="wrong_1 answer_1"><a>代謝性酸中毒</a></button></div>
+            </div>
+            <div class="diagnosis_2layer_block right_block">
+                <button class="right_2 answer_2"><a>正常</a></button>
+            </div>
+            <div class="diagnosis_2layer_block wrong_block">
+                <button class="wrong_2 answer_2"><a>正常AG酸中毒</a></button>
+                <button class="wrong_2 answer_2"><a>單純高AG酸中毒</a></button>
+                <button class="wrong_2 answer_2"><a>高AG酸中毒合併正常AG酸中毒</a></button>
+                <button class="wrong_2 answer_2"><a>高AG酸中毒合併代謝性鹼中毒</a></button>
+            </div>
+            <div class="diagnosis_2layer_block wrong_block">
+                <button class="wrong_2 answer_2"><a>代謝性酸中毒</a></button>
+            </div>
+            
+            <div class="diagnosis_2layer_block wrong_block">
+                <button class="right_2 answer_2"><a>急性呼吸性酸中毒</a></button>
+                <button class="wrong_2 answer_2"><a>慢性呼吸性酸中毒</a></button>
+            </div>
+            <div class="diagnosis_2layer_block wrong_block">
+                <button class="wrong_2 answer_2"><a>急性呼吸性鹼中毒</a></button>
+                <button class="wrong_2 answer_2"><a>慢性呼吸性鹼中毒</a></button>
+            </div>
+            </div>
+            <div class="additional_block" id="additional">
+            <h3 class="steps" style="width:100%; text-align: left;">Step 2：作答完看中毒原因與症狀</h3>
+            <h3 class="additional_h3" style="margin-left:-35px"><br>右上角功能鍵說明</h3>
+            <ol>
+                <li>返回 <i class="fa-solid fa-rotate-right" style="color:black"></i> 重新開始</li>
+                <li>箭頭 <i class="fa-solid fa-arrow-right"></i> 移動到下一題</li>
+                <li>漢堡 <i class="fa-solid fa-bars"></i> 移動到其他題目</li>
+            
+            </ol>
+          
+            <a style="margin-top:20px;width:100%; text-align: left; text-decoration: none;" href="{{ url_for('pages', page='question1') }}"><h3 class="steps" >開始為病人做診斷吧!</h3></a>
+      
+
+            </div>
+            <div class="footer_block">
+              <div class="footer_icon">
+                <a target="_blank" href="https://www.facebook.com/slekmed"><i class="fab fa-facebook-f fa-2x" style="color:white;"></i></a>
+                <a target="_blank" href="https://www.instagram.com/slekmed/"><i class="fab fa-instagram fa-2x" style="color:white;"></i></a>
+                <a target="_blank" href="mailto:slekmed@gmail.com"><i class="fa-solid fa-envelope fa-2x" style="color:white;"></i></a>
+                <a target="_blank" href="https://www.slekmed.com/"><i class="fa-solid fa-globe fa-2x" style="color:white;"></i></a>
+              </div>
+              <p>SLEKMED</p>
+            </div>
+        </div>
+
+        
+        
+        <script src="{{ url_for('static', filename = 'teama_block.js') }}"></script>
+        <script src="{{ url_for('static', filename = 'jquery.js') }}"></script>
+        <script src="{{ url_for('static', filename = 'teama_tooltip.js') }}"></script>
+    
+    </body>
+</html>
+    

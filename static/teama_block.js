@@ -56,8 +56,8 @@ button_1.forEach(n => n.addEventListener("click", ()=> {
     diagnosis_block.style.height = "250px";
 
     right_block.style.display = "flex";
+    introJs().start();
 }))
-
 
 button_2.forEach(n => n.addEventListener("click", ()=> {
     right_2.classList.toggle("active");
