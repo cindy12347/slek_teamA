@@ -594,7 +594,7 @@ body {
     
 }
 
-@media(max-width: 768px) {
+@media(max-width: 900px) {
     .footer_icon {
         min-width:180px;
     }
