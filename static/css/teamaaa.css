@@ -606,9 +606,18 @@ body {
         height:280vh;
     }
 
+    .welcome_block {
+        width: 50%;
+        height: 50%;
+    }
+
 }
 
 @media(max-width: 768px) {
+    .welcome_block {
+        width: 50%;
+        height: 40%;
+    }
     .footer_icon {
         min-width:180px;
     }
