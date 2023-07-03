@@ -405,10 +405,6 @@ body {
     border: 2px solid #EBEBE9;
     cursor: pointer;
 }
-.answer_normal {
-    width:15%;
-    
-}
 .answer_2{
     font-size:14px;
     width:80%;
